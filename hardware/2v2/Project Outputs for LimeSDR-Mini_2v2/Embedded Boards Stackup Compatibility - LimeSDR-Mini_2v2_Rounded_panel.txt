@@ -1,0 +1,17 @@
+Stackup Compatibility
+Filename     : E:\Saniok\Lime Micro\Lime PCBs\LimeSDR_Mini_2v2\Altium Designer design files\PCB\LimeSDR-Mini_2v2_Rounded_panel.PcbDoc
+Date         : 2022-11-15
+Time         : 11:58:28
+Time Elapsed : 00:00:00
+
+LimeSDR-Mini_2v2_Rounded_panel, LimeSDR-Mini_2v2_Rounded
+    Top (Signal), Top (Signal)
+    L2 (Signal), L2 (Signal)
+    L3 (Signal), L3 (Signal)
+    L4 (Signal), L4 (Signal)
+    L5 (Signal), L5 (Signal)
+    L6 (Signal), L6 (Signal)
+    L7 (Signal), L7 (Signal)
+    Bottom (Signal), Bottom (Signal)
+    Open Layer Stack Manager, Open Layer Stack Manager
+count : 9
