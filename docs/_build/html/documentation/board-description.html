@@ -1,0 +1,1694 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Board Description &mdash; LimeSDR Mini v2.2 Board 23.01 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/mr-custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="JTAG programming" href="jtag-programming.html" />
+    <link rel="prev" title="Introduction" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LimeSDR Mini v2.2 Board
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Board Description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#rf-transceiver-digital-connectivity">RF transceiver digital connectivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rf-path-control-signals">RF path control signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usb-3-0-controller">USB 3.0 controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#indication-leds">Indication LEDs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#low-speed-interfaces">Low speed interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gpio-connectors">GPIO connectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jtag-interface">JTAG interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#board-temperature-control">Board temperature control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clock-distribution">Clock distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#power-distribution">Power distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fan-mounting">Fan mounting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jtag-programming.html">JTAG programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jtag-programming.html#used-software">Used software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jtag-programming.html#connecting-limesdr-mini-v2-board-to-ft2232h-mini-module">Connecting LimeSDR Mini v2 board to FT2232H Mini Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jtag-programming.html#fpga-programming-using-lattice-diamond-programmer-software">FPGA programming using Lattice Diamond Programmer software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="jtag-programming.html#creating-a-new-project">Creating a new project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jtag-programming.html#ram-programming">RAM programming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jtag-programming.html#flash-programming">Flash programming</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="jtag-programming.html#fpga-programming-using-lattice-diamond-software">FPGA programming using Lattice Diamond software</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">LimeSDR Mini v2.2 Board</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Board Description</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/myriadrf/LimeSDR-Mini-v2/blob/master/documentation/board-description.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="board-description">
+<h1>Board Description<a class="headerlink" href="#board-description" title="Permalink to this headline">¶</a></h1>
+<p>More detailed description of Loamiest Mini board components and interconnections is given in the sections of this chapter.</p>
+<div class="section" id="rf-transceiver-digital-connectivity">
+<h2>RF transceiver digital connectivity<a class="headerlink" href="#rf-transceiver-digital-connectivity" title="Permalink to this headline">¶</a></h2>
+<p>The interface and control signals are described below:</p>
+<ul class="simple">
+<li><p>Digital Interface Signals: LENS7002 is using data bus LIMNS_DIQ1_D[11:0] and LMS_DIQ2_D[11:0], LMS_EN_IQSEL1 and LMS_EN_IQSEL2, LMS_FCLK1 and LMS_FCLK2, LMS_MCLK1 and LMS_MCLK2 signals to transfer data to/from FPGA. Indexes 1 and 2 indicate transceiver digital data PORT-1 or PORT-2. Any of these ports can be used to transmit or receive data. By default PORT-1 is selected as transmit port and PORT-2 is selected as receiver port. The FCLK# is input clock and MCLK# is output clock for LMS7002M transceiver. TXNRX signals sets ports directions. For LMS7002M interface timing details refer to <a class="reference external" href="https://limemicro.com/app/uploads/2017/07/LMS7002M-Data-Sheet-v3.1r00.pdf">LMS7002M transceiver datasheet</a> page 12-13.</p></li>
+<li><p>LMS Control Signals: these signals are used for optional functionality:
+* LMS_RXEN, LMS_TXEN – receiver and transmitter enable/disable signals connected to FPGA Bank 8 (VDIO_LMS_FPGA; 2.5V).
+* LMS_RESET – LMS7002M reset connected to FPGA Bank 3 (VDIO_LMS_FPGA; 2.5V).</p></li>
+<li><p>SPI Interface: LMS7002M transceiver is configured via 4-wire SPI interface; FPGA_SPI_SCLK, FPGA_SPI_MOSI, FPGA_SPI_MISO, FPGA_SPI_LMS_SS. The SPI interface controlled from FPGA Bank 3 (VDIO_LMS_FPGA; 2.5V).</p></li>
+<li><p>LMS I2C Interface: can be used for LMS EEPROM content modifying or for debug purposes. The signals LMS_I2C_SCL, LMS_I2C_DATA connected to EEPROM.</p></li>
+</ul>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Table 1. RF transceiver (LMS7002) digital interface pins</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 10%" />
+<col style="width: 16%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Chip pin (IC1)</strong></p></th>
+<th class="head"><p><strong>Chip reference (IC1)</strong></p></th>
+<th class="head"><p><strong>Schematic signal name</strong></p></th>
+<th class="head"><p><strong>FPGA pin</strong></p></th>
+<th class="head"><p><strong>FPGA I/O standard</strong></p></th>
+<th class="head"><p><strong>FPGA I/O standard</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>E5</p></td>
+<td><p>xoscin_tx</p></td>
+<td><p>TxPLL_CLK</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Connected to 40.00 MHz clock</p></td>
+</tr>
+<tr class="row-odd"><td><p>AB34</p></td>
+<td><p>MCLK1</p></td>
+<td><p>LMS_MCLK1</p></td>
+<td><p>H4</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AA33</p></td>
+<td><p>FCLK1</p></td>
+<td><p>LMS_FCLK1</p></td>
+<td><p>H3</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>V32</p></td>
+<td><p>TXNRX1</p></td>
+<td><p>LMS_TXNRX1</p></td>
+<td><p>F1</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>U29</p></td>
+<td><p>TXEN</p></td>
+<td><p>LMS_TXEN</p></td>
+<td><p>B7</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>1Y32</p></td>
+<td><p>ENABLE_IQSEL1</p></td>
+<td><p>LMS_EN_IQSEL1</p></td>
+<td><p>F3</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AG31</p></td>
+<td><p>DIQ1_D0</p></td>
+<td><p>LMS_DIQ1_D0</p></td>
+<td><p>J2</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>AF30</p></td>
+<td><p>DIQ1_D1</p></td>
+<td><p>LMS_DIQ1_D1</p></td>
+<td><p>L1</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AF34</p></td>
+<td><p>DIQ1_D2</p></td>
+<td><p>LMS_DIQ1_D2</p></td>
+<td><p>K1</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>AE31</p></td>
+<td><p>DIQ1_D3</p></td>
+<td><p>LMS_DIQ1_D3</p></td>
+<td><p>K4</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AD30</p></td>
+<td><p>DIQ1_D4</p></td>
+<td><p>LMS_DIQ1_D4</p></td>
+<td><p>G3</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>AC29</p></td>
+<td><p>DIQ1_D5</p></td>
+<td><p>LMS_DIQ1_D5</p></td>
+<td><p>F4</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AE33</p></td>
+<td><p>DIQ1_D6</p></td>
+<td><p>LMS_DIQ1_D6</p></td>
+<td><p>J1</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>AD32</p></td>
+<td><p>DIQ1_D7</p></td>
+<td><p>LMS_DIQ1_D7</p></td>
+<td><p>H1</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AC31</p></td>
+<td><p>DIQ1_D8</p></td>
+<td><p>LMS_DIQ1_D8</p></td>
+<td><p>G4</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>AC33</p></td>
+<td><p>DIQ1_D9</p></td>
+<td><p>LMS_DIQ1_D9</p></td>
+<td><p>F2</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AB30</p></td>
+<td><p>DIQ1_D10</p></td>
+<td><p>LMS_DIQ1_D10</p></td>
+<td><p>G1</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>AB32</p></td>
+<td><p>DIQ1_D11</p></td>
+<td><p>LMS_DIQ1_D11</p></td>
+<td><p>H2</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AM24</p></td>
+<td><p>xoscin_rx</p></td>
+<td><p>RxPLL_CLK</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Connected to 40.00 MHz clock</p></td>
+</tr>
+<tr class="row-odd"><td><p>P34</p></td>
+<td><p>MCLK2</p></td>
+<td><p>LMS_MCLK2</p></td>
+<td><p>D2</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>R29</p></td>
+<td><p>FCLK2</p></td>
+<td><p>LMS_FCLK2</p></td>
+<td><p>D1</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>U31</p></td>
+<td><p>TXNRX2</p></td>
+<td><p>LMS_TXNRX2</p></td>
+<td><p>B6</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>V34</p></td>
+<td><p>RXEN</p></td>
+<td><p>LMS_RXEN</p></td>
+<td><p>D6</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>R33</p></td>
+<td><p>ENABLE_IQSEL2</p></td>
+<td><p>LMS_EN_IQSEL2</p></td>
+<td><p>C4</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>H30</p></td>
+<td><p>DIQ2_D0</p></td>
+<td><p>LMS_DIQ2_D0</p></td>
+<td><p>A3</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>J31</p></td>
+<td><p>DIQ2_D1</p></td>
+<td><p>LMS_DIQ2_D1</p></td>
+<td><p>C2</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>K30</p></td>
+<td><p>DIQ2_D2</p></td>
+<td><p>LMS_DIQ2_D2</p></td>
+<td><p>A2</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>K32</p></td>
+<td><p>DIQ2_D3</p></td>
+<td><p>LMS_DIQ2_D3</p></td>
+<td><p>B4</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>L31</p></td>
+<td><p>DIQ2_D4</p></td>
+<td><p>LMS_DIQ2_D4</p></td>
+<td><p>C3</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>K34</p></td>
+<td><p>DIQ2_D5</p></td>
+<td><p>LMS_DIQ2_D5</p></td>
+<td><p>B2</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>M30</p></td>
+<td><p>DIQ2_D6</p></td>
+<td><p>LMS_DIQ2_D6</p></td>
+<td><p>D3</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>M32</p></td>
+<td><p>DIQ2_D7</p></td>
+<td><p>LMS_DIQ2_D7</p></td>
+<td><p>B1</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>N31</p></td>
+<td><p>DIQ2_D8</p></td>
+<td><p>LMS_DIQ2_D8</p></td>
+<td><p>A4</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>N33</p></td>
+<td><p>DIQ2_D9</p></td>
+<td><p>LMS_DIQ2_D9</p></td>
+<td><p>C1</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>P30</p></td>
+<td><p>DIQ2_D10</p></td>
+<td><p>LMS_DIQ2_D10</p></td>
+<td><p>C7</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>P32</p></td>
+<td><p>DIQ2_D11</p></td>
+<td><p>LMS_DIQ2_D11</p></td>
+<td><p>A6</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>U33</p></td>
+<td><p>CORE_LDO_EN</p></td>
+<td><p>LMS_CORE_LDO_EN</p></td>
+<td><p>C6</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>E27</p></td>
+<td><p>RESET</p></td>
+<td><p>LMS_RESET</p></td>
+<td><p>A7</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>D28</p></td>
+<td><p>SEN</p></td>
+<td><p>FPGA_SPI_LMS_SS</p></td>
+<td><p>N3</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td><p>SPI interface</p></td>
+</tr>
+<tr class="row-odd"><td><p>C29</p></td>
+<td><p>SCLK</p></td>
+<td><p>FPGA_SPI_SCLK</p></td>
+<td><p>M3</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td><p>SPI interface</p></td>
+</tr>
+<tr class="row-even"><td><p>F30</p></td>
+<td><p>SDIO</p></td>
+<td><p>FPGA_SPI_MOSI</p></td>
+<td><p>L3</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td><p>SPI interface</p></td>
+</tr>
+<tr class="row-odd"><td><p>F28</p></td>
+<td><p>SDO</p></td>
+<td><p>FPGA_SPI_MISO</p></td>
+<td><p>K3</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td><p>SPI interface</p></td>
+</tr>
+<tr class="row-even"><td><p>D26</p></td>
+<td><p>SDA</p></td>
+<td><p>LMS_I2C_SDA</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Connected to EEPROM</p></td>
+</tr>
+<tr class="row-odd"><td><p>C27</p></td>
+<td><p>SCL</p></td>
+<td><p>LMS_I2C_SCL</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Connected to EEPROM</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rf-path-control-signals">
+<h2>RF path control signals<a class="headerlink" href="#rf-path-control-signals" title="Permalink to this headline">¶</a></h2>
+<p>LimeSDR Mini RF path contains matching networks, RF switches, loopback variable attenuator and 2 SMA connectors (J1 - TX and J2 - RX) as shown in Figure 1.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/LimeSDR-Mini_v2.2_diagrams_r0_RF.png"><img alt="../_images/LimeSDR-Mini_v2.2_diagrams_r0_RF.png" src="../_images/LimeSDR-Mini_v2.2_diagrams_r0_RF.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Figure 1: LimeSDR Mini v2.2 RF diagram</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>RF transceiver TX and RX ports has its dedicated matching network which together determines the working frequency range. More detailed information about RF transceiver ports and matching network frequency ranges is listed in the Table 2.</p>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Table 2. RF transceiver ports and matching networks frequency ranges</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>RF transceiver port</strong></p></th>
+<th class="head"><p><strong>Frequency range</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>TX1_1</p></td>
+<td><p>2 GHz - 2.6 GHz</p></td>
+</tr>
+<tr class="row-odd"><td><p>TX1_2</p></td>
+<td><p>30 MHz - 1.9 GHz</p></td>
+</tr>
+<tr class="row-even"><td><p>RX1_H</p></td>
+<td><p>2 GHz - 2.6 GHz</p></td>
+</tr>
+<tr class="row-odd"><td><p>RX1_W</p></td>
+<td><p>700 MHz - 900 MHz</p></td>
+</tr>
+</tbody>
+</table>
+<p>RF path control signals are described in the Table 3.</p>
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-text">Table 3. RF path control signals</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 15%" />
+<col style="width: 10%" />
+<col style="width: 8%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Component</strong></p></th>
+<th class="head"><p><strong>Schematic signal name</strong></p></th>
+<th class="head"><p><strong>I/O standard</strong></p></th>
+<th class="head"><p><strong>FPGA pin</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>RFSW_TX</p>
+<p>(SKY13411-374LF – IC3)</p>
+</td>
+<td><p>RFSW_TX_V1</p></td>
+<td><p>3.3V</p></td>
+<td><p>B10</p></td>
+<td><p>V1 – high V2- low TX1_1 to TX and TX1_2 to ATT, V1 – low V2 – high TX1_1 to ATT and TX1_2 to TX</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>RFSW_TX_V2</p></td>
+<td><p>3.3V</p></td>
+<td><p>C9</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>RFSW_RX</p>
+<p>(SKY13411-374LF – IC3)</p>
+</td>
+<td><p>RFSW_RX_V1</p></td>
+<td><p>3.3V</p></td>
+<td><p>C11</p></td>
+<td><p>V1 – high V2- low RX_H to RX and RX1_W to ATT, V1 – low V2 – high RX1_H to ATT and RX1_W to RX</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>RFSW_RX_V2</p></td>
+<td><p>3.3V</p></td>
+<td><p>B11</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Variable attenuator</p></td>
+<td><p>TX_LB_AT</p></td>
+<td><p>3.3V</p></td>
+<td><p>C8</p></td>
+<td><p>High - -40dB, low - -25dB</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>TX_LB_SH</p></td>
+<td><p>3.3V</p></td>
+<td><p>B8</p></td>
+<td><p>Attenuator shunting.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="usb-3-0-controller">
+<h2>USB 3.0 controller<a class="headerlink" href="#usb-3-0-controller" title="Permalink to this headline">¶</a></h2>
+<p>Software controls LimeSDR Mini board via the USB 3.0 controller (FTDI USB 3.0 to FIFO interface bridge chip FT601 [link]). The controller signals description showed below:</p>
+<ul class="simple">
+<li><p>FT_D[31:0] – FTDI 32-bit data interface is connected to FPGA.</p></li>
+<li><p>FT_TXEn, FT_RXFn, FT_SIWUn, FT_WRn, FT_RDn, FT_OEn, FT_BE[3:0] – FTDI interface control signals.</p></li>
+<li><p>FT_CLK – FTDI interface clock. Clock from FTDI is fed to FPGA.</p></li>
+</ul>
+<p>More information about USB 3.0 controller (FTDI) pins, schematic signal names, FPGA interconnections and I/O standards is given in Table 4.</p>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">Table 4. USB 3.0 controller (FTDI) pins</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 22%" />
+<col style="width: 23%" />
+<col style="width: 12%" />
+<col style="width: 15%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Chip pin (IC6)</strong></p></th>
+<th class="head"><p><strong>Chip reference (IC6)</strong></p></th>
+<th class="head"><p><strong>Schematic signal name</strong></p></th>
+<th class="head"><p><strong>FPGA pin</strong></p></th>
+<th class="head"><p><strong>I/O standard</strong></p></th>
+<th class="head"><p><strong>Comment</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>40</p></td>
+<td><p>DATA_0</p></td>
+<td><p>FT_D0</p></td>
+<td><p>A13</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>41</p></td>
+<td><p>DATA_1</p></td>
+<td><p>FT_D1</p></td>
+<td><p>B12</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>42</p></td>
+<td><p>DATA_2</p></td>
+<td><p>FT_D2</p></td>
+<td><p>B15</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>43</p></td>
+<td><p>DATA_3</p></td>
+<td><p>FT_D3</p></td>
+<td><p>C12</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>44</p></td>
+<td><p>DATA_4</p></td>
+<td><p>FT_D4</p></td>
+<td><p>A16</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>45</p></td>
+<td><p>DATA_5</p></td>
+<td><p>FT_D5</p></td>
+<td><p>A12</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>46</p></td>
+<td><p>DATA_6</p></td>
+<td><p>FT_D6</p></td>
+<td><p>D18</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>47</p></td>
+<td><p>DATA_7</p></td>
+<td><p>FT_D7</p></td>
+<td><p>B17</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>50</p></td>
+<td><p>DATA_8</p></td>
+<td><p>FT_D8</p></td>
+<td><p>F15</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>51</p></td>
+<td><p>DATA_9</p></td>
+<td><p>FT_D9</p></td>
+<td><p>D16</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>52</p></td>
+<td><p>DATA_10</p></td>
+<td><p>FT_D10</p></td>
+<td><p>D15</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>53</p></td>
+<td><p>DATA_11</p></td>
+<td><p>FT_D11</p></td>
+<td><p>C13</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>54</p></td>
+<td><p>DATA_12</p></td>
+<td><p>FT_D12</p></td>
+<td><p>H18</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>55</p></td>
+<td><p>DATA_13</p></td>
+<td><p>FT_D13</p></td>
+<td><p>B13</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>56</p></td>
+<td><p>DATA_14</p></td>
+<td><p>FT_D14</p></td>
+<td><p>J18</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>57</p></td>
+<td><p>DATA_15</p></td>
+<td><p>FT_D15</p></td>
+<td><p>A15</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>60</p></td>
+<td><p>DATA_16</p></td>
+<td><p>FT_D16</p></td>
+<td><p>B18</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>61</p></td>
+<td><p>DATA_17</p></td>
+<td><p>FT_D17</p></td>
+<td><p>C18</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>62</p></td>
+<td><p>DATA_18</p></td>
+<td><p>FT_D18</p></td>
+<td><p>A17</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>63</p></td>
+<td><p>DATA_19</p></td>
+<td><p>FT_D19</p></td>
+<td><p>K18</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>64</p></td>
+<td><p>DATA_20</p></td>
+<td><p>FT_D20</p></td>
+<td><p>C15</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>65</p></td>
+<td><p>DATA_21</p></td>
+<td><p>FT_D21</p></td>
+<td><p>L18</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>66</p></td>
+<td><p>DATA_22</p></td>
+<td><p>FT_D22</p></td>
+<td><p>F18</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>67</p></td>
+<td><p>DATA_23</p></td>
+<td><p>FT_D23</p></td>
+<td><p>C16</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>69</p></td>
+<td><p>DATA_24</p></td>
+<td><p>FT_D24</p></td>
+<td><p>G16</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>70</p></td>
+<td><p>DATA_25</p></td>
+<td><p>FT_D25</p></td>
+<td><p>D13</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>71</p></td>
+<td><p>DATA_26</p></td>
+<td><p>FT_D26</p></td>
+<td><p>G18</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>72</p></td>
+<td><p>DATA_27</p></td>
+<td><p>FT_D27</p></td>
+<td><p>F16</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>73</p></td>
+<td><p>DATA_28</p></td>
+<td><p>FT_D28</p></td>
+<td><p>C17</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>74</p></td>
+<td><p>DATA_29</p></td>
+<td><p>FT_D29</p></td>
+<td><p>F17</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>75</p></td>
+<td><p>DATA_30</p></td>
+<td><p>FT_D30</p></td>
+<td><p>K15</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>76</p></td>
+<td><p>DATA_31</p></td>
+<td><p>FT_D31</p></td>
+<td><p>K17</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>58</p></td>
+<td><p>CLK</p></td>
+<td><p>FT_CLK</p></td>
+<td><p>D17</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>BE_0</p></td>
+<td><p>FT_BE0</p></td>
+<td><p>L15</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>BE_1</p></td>
+<td><p>FT_BE1</p></td>
+<td><p>J17</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>BE_2</p></td>
+<td><p>FT_BE2</p></td>
+<td><p>K16</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>BE_3</p></td>
+<td><p>FT_BE3</p></td>
+<td><p>H17</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>TXE_N</p></td>
+<td><p>FT_TXEn</p></td>
+<td><p>M16</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>RXF_N</p></td>
+<td><p>FT_RXFn</p></td>
+<td><p>H16</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>SIWU_N</p></td>
+<td><p>FT_SIWUn</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>3.3V</p></td>
+<td><p>10k pull up</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>WR_N</p></td>
+<td><p>FT_WRn</p></td>
+<td><p>J16</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>RD_N</p></td>
+<td><p>FT_RDn</p></td>
+<td><p>H15</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>OE_N</p></td>
+<td><p>FT_OEn</p></td>
+<td><p>L16</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>RESET_N</p></td>
+<td><p>FT_RESETn</p></td>
+<td><p>M17</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>WAKEP_N</p></td>
+<td><p>FT_WAKEUPn</p></td>
+<td><p>G15</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="indication-leds">
+<h2>Indication LEDs<a class="headerlink" href="#indication-leds" title="Permalink to this headline">¶</a></h2>
+<p>LimeSDR Mini board comes with three dual colour (red and green (RG)) indication LEDs. These LEDs are soldered on the top of the board near RF connectors.</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/LimeSDR-Mini_v2.2_components_LEDs.png"><img alt="../_images/LimeSDR-Mini_v2.2_components_LEDs.png" src="../_images/LimeSDR-Mini_v2.2_components_LEDs.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Figure 2: LimeSDR Mini indication LEDs (top and bottom)</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>LEDs are connected to FPGA and their function may be programmed according to the user requirements. Default function of LEDs and related information is listed in Table 5.</p>
+<table class="docutils align-default" id="id8">
+<caption><span class="caption-text">Table 5. Default LED functions</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 17%" />
+<col style="width: 15%" />
+<col style="width: 12%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Board reference</strong></p></th>
+<th class="head"><p><strong>Schematic name</strong></p></th>
+<th class="head"><p><strong>Board label</strong></p></th>
+<th class="head"><p><strong>FPGA pin</strong></p></th>
+<th class="head"><p><strong>Comment</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>LED1</p></td>
+<td><p>FPGA_LED1_R</p></td>
+<td><p>LED1</p></td>
+<td><p>V17</p></td>
+<td><p>Board status:</p>
+<p>Blinking green = LMK_CLK clock is running;</p>
+<p>Red = USB control port is active.</p>
+</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>FPGA_LED1_G</p></td>
+<td></td>
+<td><p>R16</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>LED2</p></td>
+<td><p>FPGA_LED2_R</p></td>
+<td><p>LED2</p></td>
+<td><p>R18</p>
+<p>(FPGA_GPIO5)</p>
+</td>
+<td><p>RX status:</p>
+<p>Green = DIQ data receive enabled;</p>
+<p>Off = DIQ data receive disabled.</p>
+<p>Shared with FPGA_GPIO4 and FPGA_GPIO5.</p>
+</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>FPGA_LED2_G</p></td>
+<td></td>
+<td><p>M18</p>
+<p>(FPGA_GPIO4)</p>
+</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>LED3</p></td>
+<td><p>FPGA_LED3_R</p></td>
+<td><p>LED3</p></td>
+<td><p>R17</p>
+<p>(FPGA_GPIO7)</p>
+</td>
+<td><p>TX status:</p>
+<p>Red = transmitting DIQ data;</p>
+<p>Off = no activity.</p>
+<p>Shared with FPGA_GPIO6 and FPGA_GPIO7.</p>
+</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>FPGA_LED3_G</p></td>
+<td></td>
+<td><p>T17</p>
+<p>(FPGA_GPIO6)</p>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="low-speed-interfaces">
+<h2>Low speed interfaces<a class="headerlink" href="#low-speed-interfaces" title="Permalink to this headline">¶</a></h2>
+<p>To control on board infrastructure various low speed interfaces are implemented.</p>
+<p>LMS7002M RF transceiver and VCTCXO DAC are controlled via SPI interface. Deatils of this interface are given in Table 6.</p>
+<table class="docutils align-default" id="id9">
+<caption><span class="caption-text">Table 6. FPGA_SPI interface pins</span><a class="headerlink" href="#id9" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Schematic signal name</strong></p></th>
+<th class="head"><p><strong>FPGA pin</strong></p></th>
+<th class="head"><p><strong>I/O standard</strong></p></th>
+<th class="head"><p><strong>Comment</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>FPGA_SPI_SCLK</p></td>
+<td><p>M3</p></td>
+<td><p>2.5V /3.3V</p></td>
+<td><p>Serial Clock (FPGA output)</p></td>
+</tr>
+<tr class="row-odd"><td><p>FPGA_SPI_MOSI</p></td>
+<td><p>L3</p></td>
+<td><p>2.5V /3.3V</p></td>
+<td><p>Data (FPGA output)</p></td>
+</tr>
+<tr class="row-even"><td><p>FPGA_SPI_MISO</p></td>
+<td><p>K3</p></td>
+<td><p>2.5V /3.3V</p></td>
+<td><p>Data (FPGA input)</p></td>
+</tr>
+<tr class="row-odd"><td><p>FPGA_SPI_LMS_SS</p></td>
+<td><p>N3</p></td>
+<td><p>2.5V /3.3V</p></td>
+<td><p>IC1 (LMS7002) SPI slave select (FPGA output)</p></td>
+</tr>
+<tr class="row-even"><td><p>FPGA_SPI_DAC_SS</p></td>
+<td><p>L4</p></td>
+<td><p>2.5V /3.3V</p></td>
+<td><p>IC11 SPI slave select (FPGA output)</p></td>
+</tr>
+</tbody>
+</table>
+<p>FPGA configuration flash memory is connected via separate SPI bus, more information is given in Table 7.</p>
+<table class="docutils align-default" id="id10">
+<caption><span class="caption-text">Table 7. FPGA_CFG_SPI interface pins</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 15%" />
+<col style="width: 19%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Schematic signal name</strong></p></th>
+<th class="head"><p><strong>FPGA pin</strong></p></th>
+<th class="head"><p><strong>I/O standard</strong></p></th>
+<th class="head"><p><strong>Comment</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>FPGA_CFG_SPI_SCLK</p></td>
+<td><p>U16</p></td>
+<td><p>3.3V</p></td>
+<td><p>Serial Clock (FPGA output)</p></td>
+</tr>
+<tr class="row-odd"><td><p>FPGA_CFG_SPI_MOSI</p></td>
+<td><p>U18</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>FPGA_CFG_SPI_MISO</p></td>
+<td><p>T18</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>FPGA_CFG_SPI_SS</p></td>
+<td><p>U17</p></td>
+<td><p>3.3V</p></td>
+<td><p>IC15 SPI slave select (FPGA output)</p></td>
+</tr>
+</tbody>
+</table>
+<p>There is temperature sensor and EEPROM memory connected to the FPGA via I2C bus. Deatils of this interface are given in Table 8.</p>
+<table class="docutils align-default" id="id11">
+<caption><span class="caption-text">Table 8. FPGA_I2C interface pins</span><a class="headerlink" href="#id11" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 22%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>I2C slave device</strong></p></th>
+<th class="head"><p><strong>Slave device</strong></p></th>
+<th class="head"><p><strong>I2C address</strong></p></th>
+<th class="head"><p><strong>I/O standard</strong></p></th>
+<th class="head"><p><strong>Comment</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>IC10</p></td>
+<td><p>Temperature sensor</p></td>
+<td><p>1 0 0 1 0 0 0 RW</p></td>
+<td><p>3.3V</p></td>
+<td><p>LM75</p></td>
+</tr>
+<tr class="row-odd"><td><p>IC12</p></td>
+<td><p>EEPROM</p></td>
+<td><p>1 0 1 0 0 0 0 RW</p></td>
+<td><p>3.3V</p></td>
+<td><p>M24128</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="gpio-connectors">
+<h2>GPIO connectors<a class="headerlink" href="#gpio-connectors" title="Permalink to this headline">¶</a></h2>
+<p>Eight GPIOs from FPGA are connected to 10 pin 0.05” header. Additional 2 pins are dedicated for power. FPGA_GPIO[7:4] are shared with TX and RX LEDs. Remove solder from solder bridges to disconnect LEDs from GPIOs lines if required. More information about GPIO connector J3 is given in Table 9.</p>
+<table class="docutils align-default" id="id12">
+<caption><span class="caption-text">Table 9. FPGA GPIO connector (J3) pins</span><a class="headerlink" href="#id12" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 21%" />
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Connector pin</strong></p></th>
+<th class="head"><p><strong>Schematic signal name</strong></p></th>
+<th class="head"><p><strong>FPGA pin</strong></p></th>
+<th class="head"><p><strong>I/O standard</strong></p></th>
+<th class="head"><p><strong>Comment</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>FPGA_GPIO0</p></td>
+<td><p>N15</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>FPGA_GPIO1</p></td>
+<td><p>N18</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>FPGA_GPIO2</p></td>
+<td><p>N16</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>FPGA_GPIO3</p></td>
+<td><p>N17</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>FPGA_GPIO4</p></td>
+<td><p>M18</p></td>
+<td><p>3.3V</p></td>
+<td><p>Shared with FPGA_LED2_G</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>FPGA_GPIO5</p></td>
+<td><p>R18</p></td>
+<td><p>3.3V</p></td>
+<td><p>Shared with FPGA_LED2_R</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>FPGA_GPIO6</p></td>
+<td><p>T17</p></td>
+<td><p>3.3V</p></td>
+<td><p>Shared with FPGA_LED3_G</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>FPGA_GPIO7</p></td>
+<td><p>R17</p></td>
+<td><p>3.3V</p></td>
+<td><p>Shared with FPGA_LED3_R</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>GND</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+<td><p>Ground pin</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+<td><p>Selectable power net (3.3V or 5V). Default 3.3V</p></td>
+</tr>
+</tbody>
+</table>
+<p>Another 2 GPIOs are connected to 5 pin header on the board edge. More information about FPGA_EGPIO connector J7 is given in Table 10.</p>
+<table class="docutils align-default" id="id13">
+<caption><span class="caption-text">Table 10. FPGA EGPIO connector (J4) pins</span><a class="headerlink" href="#id13" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Connector pin</strong></p></th>
+<th class="head"><p><strong>Schematic signal name</strong></p></th>
+<th class="head"><p><strong>FPGA pin</strong></p></th>
+<th class="head"><p><strong>I/O standard</strong></p></th>
+<th class="head"><p><strong>Comment</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>GND</p></td>
+<td></td>
+<td></td>
+<td><p>Ground pin</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>FPGA_EGPIO0</p></td>
+<td><p>A10</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>FPGA_EGPIO1</p></td>
+<td><p>A8</p></td>
+<td><p>3.3V</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>VCC3P3</p></td>
+<td></td>
+<td><p>3.3V</p></td>
+<td><p>Power net (3.3V)</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>VCC5P0</p></td>
+<td></td>
+<td><p>5.0V</p></td>
+<td><p>Power net (5.0V)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="jtag-interface">
+<h2>JTAG interface<a class="headerlink" href="#jtag-interface" title="Permalink to this headline">¶</a></h2>
+<p>To debug FPGA design, flash bitstream to FPGA and/or Flash memory JTAG is used. It is located on the PCB top side (see <a class="reference internal" href="../index.html#target1"><span class="std std-ref">Figure 4: LimeSDR Mini v2.2 board top connectors and main components</span></a>) and attaches to the programmer using 7-pin, 0.1” spaced JTAG connector J5. JTAG connector pins, schematic signal names, FPGA interconnections and I/O standards are listed in Table 11.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 21%" />
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 39%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>FPGA_GPIO5</p></td>
+<td><p>R18</p></td>
+<td><p>3.3V</p></td>
+<td><p>Shared with FPGA_LED2_R</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>FPGA_GPIO6</p></td>
+<td><p>T17</p></td>
+<td><p>3.3V</p></td>
+<td><p>Shared with FPGA_LED3_G</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>FPGA_GPIO7</p></td>
+<td><p>R17</p></td>
+<td><p>3.3V</p></td>
+<td><p>Shared with FPGA_LED3_R</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>GND</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+<td><p>Ground pin</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+<td><p>Selectable power net (3.3V or 5V). Default 3.3V</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Another 2 GPIOs are connected to 5 pin header on the board edge. More information about FPGA_EGPIO connector J7 is given in Table 10.</p>
+<table class="docutils align-default" id="id14">
+<caption><span class="caption-text">Table 11. JTAG connector J5 pins</span><a class="headerlink" href="#id14" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 28%" />
+<col style="width: 14%" />
+<col style="width: 18%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Connector pin</strong></p></th>
+<th class="head"><p><strong>Schematic signal name</strong></p></th>
+<th class="head"><p><strong>FPGA pin</strong></p></th>
+<th class="head"><p><strong>I/O standard</strong></p></th>
+<th class="head"><p><strong>Comment</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>GND</p></td>
+<td></td>
+<td></td>
+<td><p>Ground</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>TCK</p></td>
+<td><p>U13</p></td>
+<td><p>3.3V</p></td>
+<td><p>Test Clock</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>TDO</p></td>
+<td><p>V14</p></td>
+<td><p>3.3V</p></td>
+<td><p>Test Data Out</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>TMS</p></td>
+<td><p>V13</p></td>
+<td><p>3.3V</p></td>
+<td><p>Test Mode Select</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>TDI</p></td>
+<td><p>T13</p></td>
+<td><p>3.3V</p></td>
+<td><p>Test Data In</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>VCC3P3</p></td>
+<td></td>
+<td></td>
+<td><p>Power (3.3V)</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>VCC5P0</p></td>
+<td></td>
+<td></td>
+<td><p>Power (5.0V)</p></td>
+</tr>
+</tbody>
+</table>
+<p>More information about JTAG programming can be found in section 3.</p>
+</div>
+<div class="section" id="board-temperature-control">
+<h2>Board temperature control<a class="headerlink" href="#board-temperature-control" title="Permalink to this headline">¶</a></h2>
+<p>LimeSDR Mini has integrated temperature sensor which controls FAN to keep board in operating temperature range. FAN must be connected to J9 (0.1” pitch) connector. FAN control voltage y default is 5V, but it can be changed to 3.3V by resistors.</p>
+<p>Fan will be turned on if board will heat up to 55°C and FAN will be turned off if board will cool down to 45°C.</p>
+<div class="figure align-default" id="id15">
+<a class="reference internal image-reference" href="../_images/LimeSDR-Mini_v2.2_temp_hysteresis.png"><img alt="../_images/LimeSDR-Mini_v2.2_temp_hysteresis.png" src="../_images/LimeSDR-Mini_v2.2_temp_hysteresis.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Figure 3: FAN control temperature hysteresis</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="clock-distribution">
+<h2>Clock distribution<a class="headerlink" href="#clock-distribution" title="Permalink to this headline">¶</a></h2>
+<p>LimeSDR Mini board clock distribution block diagram is presented in Figure 4. LimeSDR Mini board has onboard 40.00 MHz VCTCXO that is reference clock for RF transceiver and FPGA PLLs.</p>
+<div class="figure align-default" id="id16">
+<a class="reference internal image-reference" href="../_images/LimeSDR-Mini_v2.2_diagrams_r0_clock.png"><img alt="../_images/LimeSDR-Mini_v2.2_diagrams_r0_clock.png" src="../_images/LimeSDR-Mini_v2.2_diagrams_r0_clock.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Figure 4: LimeSDR Mini v2.2 board clock distribution block diagram</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+<p>Rakon E7355LF 40 MHz voltage controlled temperature compensated crystal oscillator (VCTCXO) is main board clock source. VCTCXO frequency can be tuned by using DAC (IC11 10 bit or IC16 16 bit (unpopulated)). Main VCTCXO parameters are listed in Table 12.</p>
+<table class="docutils align-default" id="id17">
+<caption><span class="caption-text">Table 12. Rakon E7355LF VCTCXO main parameters</span><a class="headerlink" href="#id17" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 54%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Frequency parameter</strong></p></th>
+<th class="head"><p><strong>Value</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Calibration (25°C ± 1°C)</p></td>
+<td><p>± 1 ppm max</p></td>
+</tr>
+<tr class="row-odd"><td><p>Stability (-40 to 85 °C)</p></td>
+<td><p>± 0.5 max</p></td>
+</tr>
+<tr class="row-even"><td><p>Long term stability (1 year, 10 years)</p></td>
+<td><p>± 2 ppm max, ± 4 ppm max</p></td>
+</tr>
+<tr class="row-odd"><td><p>Control voltage range</p></td>
+<td><p>0.5V .. 2.5V</p></td>
+</tr>
+<tr class="row-even"><td><p>Frequency tuning</p></td>
+<td><p>± 7 ppm min, ± 15 ppm max</p></td>
+</tr>
+<tr class="row-odd"><td><p>Slope</p></td>
+<td><p>+9 ppm/V</p></td>
+</tr>
+</tbody>
+</table>
+<p>VCTCXO clock is connected to clock buffer IC9. Buffered VCTCXO clock is connected to RF transceiver, FPGA. Buffered VCTCXO clock is also connected to connector J7 (REF_CLK_OUT) and can be fed to external hardware for synchronisation. VCTCXO clock can be disconnected from clock buffer input (remove R63 and solder R66) and external reference clock can be supplied from connector J8 (REF_CLK_IN) instead of VCTCXO (40 MHz). Main board clock lines and other related information are listed in Table 13.</p>
+<table class="docutils align-default" id="id18">
+<caption><span class="caption-text">Table 13. Rakon E7355LF VCTCXO main parameters</span><a class="headerlink" href="#id18" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 21%" />
+<col style="width: 14%" />
+<col style="width: 11%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Source</strong></p></th>
+<th class="head"><p><strong>Schematic signal name</strong></p></th>
+<th class="head"><p><strong>I/O standard</strong></p></th>
+<th class="head"><p><strong>FPGA pin</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>External</p></td>
+<td><p>REF_CLK_IN</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>External reference clock input</p></td>
+</tr>
+<tr class="row-odd"><td><p>Clock buffer (IC9)</p></td>
+<td><p>REF_CLK_OUT</p></td>
+<td><p>3.3V</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Reference clock output</p></td>
+</tr>
+<tr class="row-even"><td><p>Clock buffer (IC9)</p></td>
+<td><p>LMK_CLK</p></td>
+<td><p>3.3V</p></td>
+<td><p>A9</p></td>
+<td><p>Reference clock connected to FPGA</p></td>
+</tr>
+<tr class="row-odd"><td><p>RF transceiver (IC1)</p></td>
+<td><p>RxPLL_CLK</p></td>
+<td><p>1.8V</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Reference clock input</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>TxPLL_CLK</p></td>
+<td><p>1.8V</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Reference clock input</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>LMS_MCLK1</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td><p>H4</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>LMS_FCLK1</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td><p>H3</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>LMS_MCLK2</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td><p>D2</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>LMS_FCLK2</p></td>
+<td><p>2.5V/3.3V</p></td>
+<td><p>D1</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>USB 3.0 controller (IC8)</p></td>
+<td><p>FT_CLK</p></td>
+<td><p>3.3V</p></td>
+<td><p>D17</p></td>
+<td><p>Clock output (100 MHz) from USB controller</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="power-distribution">
+<h2>Power distribution<a class="headerlink" href="#power-distribution" title="Permalink to this headline">¶</a></h2>
+<p>LimeSDR Mini board is powered from USB port (5V). LimeSDR Mini board power delivery network consists of different power rails with different voltages, filters, power sequences. LimeSDR Mini board power distribution block diagram is presented in Figure 5.</p>
+<div class="figure align-default" id="id19">
+<a class="reference internal image-reference" href="../_images/LimeSDR-Mini_v2.2_diagrams_r0_power.png"><img alt="../_images/LimeSDR-Mini_v2.2_diagrams_r0_power.png" src="../_images/LimeSDR-Mini_v2.2_diagrams_r0_power.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Figure 5: LimeSDR Mini v2.2 board power distribution block diagram</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="fan-mounting">
+<h2>Fan mounting<a class="headerlink" href="#fan-mounting" title="Permalink to this headline">¶</a></h2>
+<p>LimeSDR Mini v2.2 board features three holes which may be used to secure the board into the case or fan mounting for instance as shown in Figure 6. Two holes are placed at the sides of USB connector and one more hole is between SMA connectors.</p>
+<div class="figure align-default" id="id20">
+<a class="reference internal image-reference" href="../_images/LimeSDR-Mini_v2.2_fan_mounting_1.png"><img alt="../_images/LimeSDR-Mini_v2.2_fan_mounting_1.png" src="../_images/LimeSDR-Mini_v2.2_fan_mounting_1.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Figure 6: LimeSDR Mini v2.2 fan mounting</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You have to be careful when using mounting holes not to damage R72 resistor and C186 capacitor while there is no much clearence as you may see in Figure 7.</p>
+</div>
+<div class="figure align-default" id="id21">
+<a class="reference internal image-reference" href="../_images/LimeSDR-Mini_v2.2_fan_mounting_2.png"><img alt="../_images/LimeSDR-Mini_v2.2_fan_mounting_2.png" src="../_images/LimeSDR-Mini_v2.2_fan_mounting_2.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Figure 7: LimeSDR Mini v2.2 mounting hole clearence</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+<p>Recommended fan mounting solution is shown in Figure 8.</p>
+<div class="figure align-default" id="id22">
+<a class="reference internal image-reference" href="../_images/LimeSDR-Mini_v2.2_fan_mounting_3.png"><img alt="../_images/LimeSDR-Mini_v2.2_fan_mounting_3.png" src="../_images/LimeSDR-Mini_v2.2_fan_mounting_3.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Figure 8: FIX-TP2-5 fan mounting components</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id23">
+<a class="reference internal image-reference" href="../_images/LimeSDR-Mini_v2.2_fan_mounting_4.png"><img alt="../_images/LimeSDR-Mini_v2.2_fan_mounting_4.png" src="../_images/LimeSDR-Mini_v2.2_fan_mounting_4.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Figure 9: FIX-HP2-5 fan mounting components</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</div>
+<p>Use two FIX-TP2-5 stands with internal and external thread (4mm width, M2 thread) as a spacers to mount the fan on top of LimeSDR Mini v2.2. Put FIX-TP2-5 stands from the top through LimeSDR Mini v2.2 slot mounting holes around USB connector as shown in Figure 8. Secure the stands to the fan using two M2 thread screws (ex. P/N 1219480, Phillips head screw, M2x10). Secure two FIX-TP2-5 stands using two FIX-HP2-5 spacers as nuts from the bottom of the PCB as shown in Figure 9. This is enough to hold the fan but one may use additional FIX-HP2-5 (4mm width, M2 thread) stand with internal thread as an additional fan rest point which rests on PCB over unmounted J3 connector as shown in Figures 8 and 9. Secure FIX-HP2-5 spacer to the fan using the same screw (P/N 1219480).</p>
+<p>Total required mechanical components per LimeSDR Mini v2.2:</p>
+<ul class="simple">
+<li><p>2x <a class="reference external" href="https://www.tme.eu/en/details/fix-tp2-5/plastic-standoffs/fix-fasten/">FIX-TP2-5</a> stands with internal and external M2 thread;</p></li>
+<li><p>3x <a class="reference external" href="https://www.tme.eu/en/details/fix-hp2-5/plastic-standoffs/fix-fasten/">FIX-HP2-5</a> stands with internal M2 threads;</p></li>
+<li><p>3x <a class="reference external" href="https://www.tme.eu/en/details/b2x10_bn1435/bolts/bossard/1219480/">1219480</a> screws; M2x10 10mm length;</p></li>
+<li><p>1x <a class="reference external" href="https://www.digikey.com/en/products/detail/sunon-fans/4127-MF30060V1-1000U-A99/9838567">4127/MF30060V1-1000U-A99</a> 30mm fan.</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="jtag-programming.html" class="btn btn-neutral float-right" title="JTAG programming" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, MyriadRF Contributors.
+      <span class="lastupdated">
+        Last updated on Jan 11, 2023.
+      </span>
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
