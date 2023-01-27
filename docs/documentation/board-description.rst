@@ -109,8 +109,8 @@ The interface and control signals are described below:
   | C27                | SCL                      | LMS_I2C_SCL               | -            | -                     | Connected to EEPROM          |
   +--------------------+--------------------------+---------------------------+--------------+-----------------------+------------------------------+
 
-RF path control signals
------------------------
+RF path and control signals
+---------------------------
 
 LimeSDR Mini RF path contains matching networks, RF switches, loopback variable attenuator and 2 SMA connectors (J1 - TX and J2 - RX) as shown in Figure 1.
 
@@ -158,6 +158,24 @@ RF path control signals are described in the Table 3.
   +------------------------+---------------------------+------------------+--------------+-------------------------------------------------------------------------------------------------+
   |                        | TX_LB_SH                  | 3.3V             | B8           | Attenuator shunting.                                                                            |
   +------------------------+---------------------------+------------------+--------------+-------------------------------------------------------------------------------------------------+
+
+Notes on RF loopback
+--------------------
+
+LimeSDR Mini v2.X encountered a change of shunt transistor VT3 in the RF feedback attenuator chain due to the original part becoming EOL. The original part BFT92,215 had a small output capacitance of around 1.2 pF, whereas the new RF transistor ZVN4525E6TA has a larger output capacitance of 11 pF. An extract of the schematic is presented in Figure 2.
+
+.. figure:: images/LimeSDR-Mini_Attenuator_v1_vs_v2.png
+  :width: 600
+  
+  Figure 2: LimeSDR Mini RF loopback attenuator implementation on v1.x and v2.x boards
+
+The increased shunt capacitance affects a frequency response of the attenuator as shown in Figure 3. The attenuation is −46 dB at 1 GHz and −52 dB at 2.1 GHz for the new LimeSDR-Mini v2.X board. The frequency response shown in Figure 3 can be used as a reference RF loopback attenuation in the supported frequency range. 
+
+.. figure:: images/LimeSDR-Mini_v2.2_RF_LB_response.png
+  :width: 600
+  
+  Figure 3: LimeSDR Mini v2.2 RF loopback frequency response
+
 
 USB 3.0 controller
 ------------------
@@ -274,7 +292,7 @@ LimeSDR Mini board comes with three dual colour (red and green (RG)) indication 
 .. figure:: images/LimeSDR-Mini_v2.2_components_LEDs.png
   :width: 600
   
-  Figure 2: LimeSDR Mini indication LEDs (top and bottom)
+  Figure 4: LimeSDR Mini indication LEDs (top and bottom)
 
 LEDs are connected to FPGA and their function may be programmed according to the user requirements. Default function of LEDs and related information is listed in Table 5.
 
@@ -467,17 +485,17 @@ Fan will be turned on if board will heat up to 55°C and FAN will be turned off 
 .. figure:: images/LimeSDR-Mini_v2.2_temp_hysteresis.png
   :width: 600
   
-  Figure 3: FAN control temperature hysteresis 
+  Figure 5: FAN control temperature hysteresis 
 
 Clock distribution
 ------------------
 
-LimeSDR Mini board clock distribution block diagram is presented in Figure 4. LimeSDR Mini board has onboard 40.00 MHz VCTCXO that is reference clock for RF transceiver and FPGA PLLs. 
+LimeSDR Mini board clock distribution block diagram is presented in Figure 6. LimeSDR Mini board has onboard 40.00 MHz VCTCXO that is reference clock for RF transceiver and FPGA PLLs. 
 
 .. figure:: images/LimeSDR-Mini_v2.2_diagrams_r0_clock.png
   :width: 600
   
-  Figure 4: LimeSDR Mini v2.2 board clock distribution block diagram
+  Figure 6: LimeSDR Mini v2.2 board clock distribution block diagram
 
 Rakon E7355LF 40 MHz voltage controlled temperature compensated crystal oscillator (VCTCXO) is main board clock source. VCTCXO frequency can be tuned by using DAC (IC11 10 bit or IC16 16 bit (unpopulated)). Main VCTCXO parameters are listed in Table 12.
 
@@ -530,44 +548,44 @@ VCTCXO clock is connected to clock buffer IC9. Buffered VCTCXO clock is connecte
 Power distribution
 ------------------
 
-LimeSDR Mini board is powered from USB port (5V). LimeSDR Mini board power delivery network consists of different power rails with different voltages, filters, power sequences. LimeSDR Mini board power distribution block diagram is presented in Figure 5.
+LimeSDR Mini board is powered from USB port (5V). LimeSDR Mini board power delivery network consists of different power rails with different voltages, filters, power sequences. LimeSDR Mini board power distribution block diagram is presented in Figure 7.
 
 .. figure:: images/LimeSDR-Mini_v2.2_diagrams_r0_power.png
   :width: 600
   
-  Figure 5: LimeSDR Mini v2.2 board power distribution block diagram
+  Figure 7: LimeSDR Mini v2.2 board power distribution block diagram
 
 Fan mounting
 ------------
 
-LimeSDR Mini v2.2 board features three holes which may be used to secure the board into the case or fan mounting for instance as shown in Figure 6. Two holes are placed at the sides of USB connector and one more hole is between SMA connectors. 
+LimeSDR Mini v2.2 board features three holes which may be used to secure the board into the case or fan mounting for instance as shown in Figure 8. Two holes are placed at the sides of USB connector and one more hole is between SMA connectors. 
 
 .. figure:: images/LimeSDR-Mini_v2.2_fan_mounting_1.png
   :width: 600
   
-  Figure 6: LimeSDR Mini v2.2 fan mounting
+  Figure 8: LimeSDR Mini v2.2 fan mounting
 
 .. warning::
-  You have to be careful when using mounting holes not to damage R72 resistor and C186 capacitor while there is no much clearence as you may see in Figure 7.
+  You have to be careful when using mounting holes not to damage R72 resistor and C186 capacitor while there is no much clearence as you may see in Figure 9.
 
 .. figure:: images/LimeSDR-Mini_v2.2_fan_mounting_2.png
   :width: 600
   
-  Figure 7: LimeSDR Mini v2.2 mounting hole clearence
+  Figure 10: LimeSDR Mini v2.2 mounting hole clearence
 
 Recommended fan mounting solution is shown in Figure 8.
 
 .. figure:: images/LimeSDR-Mini_v2.2_fan_mounting_3.png
   :width: 600
   
-  Figure 8: FIX-TP2-5 fan mounting components
+  Figure 11: FIX-TP2-5 fan mounting components
 
 .. figure:: images/LimeSDR-Mini_v2.2_fan_mounting_4.png
   :width: 600
   
-  Figure 9: FIX-HP2-5 fan mounting components
+  Figure 12: FIX-HP2-5 fan mounting components
 
-Use two FIX-TP2-5 stands with internal and external thread (4mm width, M2 thread) as a spacers to mount the fan on top of LimeSDR Mini v2.2. Put FIX-TP2-5 stands from the top through LimeSDR Mini v2.2 slot mounting holes around USB connector as shown in Figure 8. Secure the stands to the fan using two M2 thread screws (ex. P/N 1219480, Phillips head screw, M2x10). Secure two FIX-TP2-5 stands using two FIX-HP2-5 spacers as nuts from the bottom of the PCB as shown in Figure 9. This is enough to hold the fan but one may use additional FIX-HP2-5 (4mm width, M2 thread) stand with internal thread as an additional fan rest point which rests on PCB over unmounted J3 connector as shown in Figures 8 and 9. Secure FIX-HP2-5 spacer to the fan using the same screw (P/N 1219480).
+Use two FIX-TP2-5 stands with internal and external thread (4mm width, M2 thread) as a spacers to mount the fan on top of LimeSDR Mini v2.2. Put FIX-TP2-5 stands from the top through LimeSDR Mini v2.2 slot mounting holes around USB connector as shown in Figure 11. Secure the stands to the fan using two M2 thread screws (ex. P/N 1219480, Phillips head screw, M2x10). Secure two FIX-TP2-5 stands using two FIX-HP2-5 spacers as nuts from the bottom of the PCB as shown in Figure 12. This is enough to hold the fan but one may use additional FIX-HP2-5 (4mm width, M2 thread) stand with internal thread as an additional fan rest point which rests on PCB over unmounted J3 connector as shown in Figures 11 and 12. Secure FIX-HP2-5 spacer to the fan using the same screw (P/N 1219480).
 
 Total required mechanical components per LimeSDR Mini v2.2:
 
