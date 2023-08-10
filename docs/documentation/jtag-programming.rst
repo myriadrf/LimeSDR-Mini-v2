@@ -115,6 +115,8 @@ After successful programming operation "Status" field will change to "PASS" high
 Flash programming
 ~~~~~~~~~~~~~~~~~
 
+**IMPORTANT!** Backgroud programming has to be enabled first by programming `lms7_trx_preflash_gw.bit <https://github.com/myriadrf/LimeSDR-Mini-v2_GW/blob/main/LimeSDR-Mini_bitstreams/lms7_trx_preflash_gw.bit>`__ file with "RAM programing" procedure.
+
 In context menu press "Edit -> Device properties" and in section "Device Operation" set "Access mode" to "SPI Flash Background Programming" and "Operation" to "SPI Flash Erase,Program,Verify".
 
 Load appropriate programming file (gateware, bitstream) and set the remaining parameters for Winbond W25Q128JV flash memory as shown in the image below and then press "OK".
@@ -150,18 +152,29 @@ You can now save project for future use by selecting menu item "File -> Save".
 FPGA programming using Lattice Diamond software
 -----------------------------------------------
 
-Open archived project File->Open->Archived Project...
+Open .ldf project File->Open->Project...
 
-FPGA SRAM programming:
+**FPGA SRAM programming**
 
-* Double click on \*.xcf file in File List tab.
-* In programmer select .bit file.
+* Open programmer setup file: ./LimeSDR-Mini_bitstreams/impl1_sram.xcf
+* Select .bit file : ./LimeSDR-Mini_bitstreams/lms7_trx_impl1.bit
 * Click Program.
 * You should see blinking LED1 in green colour. 
 
-FPGA FLASH programming:
+**FPGA FLASH programming**
 
-* Double click on \*.xcf file in File List tab.
-* In programmer select .mcs file.
-* Click Program.
-* You should see blinking LED after reapplying power to board.
+
+First program bitstream file to enable background programming:
+
+
+* Open programmer setup file: ./LimeSDR-Mini_bitstreams/impl1_sram.xcf
+* Select .bit file : ./LimeSDR-Mini_bitstreams/lms7_trx_preflash_gw.bit
+* Click Program
+
+Program Flash:
+
+
+* Open programmer setup file: ./LimeSDR-Mini_bitstreams/impl1_flash_dualboot.xcf
+* Select .mcs file : ./LimeSDR-Mini_bitstreams/lms7_trx_impl1_dualboot.mcs
+* Click Program
+* You should see blinking LED after reapplying power to board
