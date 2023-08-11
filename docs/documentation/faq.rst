@@ -3,6 +3,29 @@ FAQ
 
 In this section you can find frequently asked questions related to LimeSDR-Mini v2.2 board
 
+It is not working, please help.
+--------------------------------------
+
+Avoid vague explanation of encountered issues. Try to provide as many relevant information as you can, for e.g:
+
+* What hardware are you using? Write exact board name and version as you see on silkscreen. 
+* What software and version are you using?
+* What gateware version are you using? 
+* Was it working before? 
+* Did you modified hardware, software or gateware? If so explain your modifications. 
+* Provide steps to reproduce the issue. 
+
+
+Where can I ask for help or report issues?
+------------------------------------------
+
+* First read this FAQ and go trough available documents in `https://limesdr-mini.myriadrf.org/ <https://limesdr-mini.myriadrf.org/>`__
+* Try to search `https://discourse.myriadrf.org/ <https://discourse.myriadrf.org/>`__ maybe someone already had similar issue, if not post your question there.
+* For HW related issues check `LimeSDR-Mini-v2 <https://github.com/myriadrf/LimeSDR-Mini-v2/issues>`__ GitHub repository. 
+* For GW related issues check `LimeSDR-Mini-v2_GW <https://github.com/myriadrf/LimeSDR-Mini-v2_GW/issues>`__ GitHub repository. 
+* For SW related issues check `LimeSuite <https://github.com/myriadrf/LimeSuite/issues>`__ GitHub repository
+
+
 I cannot connect board to LimeSuite GUI. 
 ---------------------------------------- 
 
