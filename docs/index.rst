@@ -5,6 +5,7 @@
    Introduction <self>
    documentation/board-description
    documentation/jtag-programming
+   documentation/faq
 
 Introduction
 ============
