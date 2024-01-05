@@ -39,7 +39,7 @@ How to configure FT601 USB3.0 chip?
 I cannot connect board to LimeSuite GUI, no LEDs are blinking how can I recover my board?  
 ----------------------------------------------------------------------------------------- 
 
-* Try different USB3.0 cable, if possible connect it directly to USB3.0 port.
+* Try using a different USB 3.0 cable or connect the device directly to a USB 3.0 port. The use of low-quality USB 3.0 cables and USB 3.0 hubs may result in power-related issues.
 
 * Check FT601 chip configuration, see `How to configure FT601 USB3.0 chip?`_ .
 
