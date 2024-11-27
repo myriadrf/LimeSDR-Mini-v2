@@ -60,7 +60,7 @@ html_context = {
     'display_github': True,
     'github_user': 'myriadrf',
     'github_repo': 'LimeSDR-Mini-v2',
-    'github_version': 'master/' 
+    'github_version': 'master/docs/' 
 }
 
 # This is where we place substitutions, such as for Unicode characters.
