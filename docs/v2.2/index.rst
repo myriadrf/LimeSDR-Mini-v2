@@ -1,3 +1,188 @@
+***********************
+LimeSDR Mini v2.2 Board
+***********************
+
+Introduction
+============
+
+LimeSDR Mini v2.2 Board Key Features
+------------------------------------
+
+LimeSDR Mini is low-cost software defined radio board. LimeSDR Mini development board provides a hardware platform for developing and prototyping high-performance and logic-intensive digital and RF designs based on Lattice Semiconductor’s ECP5 FPGA and Lime Microsystems transceiver.
+
+.. figure:: images/LimeSDR-Mini_v2.2_3D_top.png
+  :width: 600
+  
+  Figure 1: LimeSDR Mini v2.2 board top view
+
+
+.. figure:: images/LimeSDR-Mini_v2.2_3D_bot.png
+  :width: 600
+  
+  Figure 2: LimeSDR Mini v2.2 board bottom view
+
+LimeSDR Mini board features:
+
+* RF and BB parameters:
+
+  * Configuration: SISO (1x TX, 1x RX)
+  * Frequency range: 10 MHz – 3.5 GHz
+  * Bandwidth: 30.72 MHz
+  * Sample depth: 12 bit
+  * Sample rate: 30.72 MSPS
+  * Transmit power: max 10 dBm (depending on frequency)
+
+* USB 3.0 controller: FTDI FT601
+
+* FPGA: board is designed for Lattice ECP5 family LFE5U-25F/LFE5U-45F/LFE5U-85F FPGAs in 285-ball csfBGA package. By default board is assembled with LFE5U-45F-MG285 FPGA. Lattice ECP5 LFE5U-45F features:
+
+  * 285-pin csfBGA package (10 x 10 mm, 0.5 mm)
+  * 44 K LUTs logic capacity
+  * 108 sysMEM Blocks (18 Kb)
+  * 1944 Kb Embedded Memory
+  * 351 Kb distributed RAM
+  * 72x 18x18-bit multipliers
+  * 4x PLLs and 4x DLLs
+  * 118 IOs
+  * FPGA configuration via JTAG
+	
+* RF transceiver: Lime Microsystems LMS7002M
+
+* EEPROM Memory: 2x 128Kb EEPROMs for LMS MCU firmware and FPGA data (optional)
+
+* FLASH Memory: 128Mb Flash memory for FPGA configuration
+
+* Temperature sensor: LM75
+
+* General user inputs/outputs:
+
+  * 3x Dual colour (RG) LEDs
+  * 8x + 2x FPGA GPIO pinheaders (3.3V) (optional)
+
+* Connections:
+
+  * USB 3.0 (type A) plug
+  * Coaxial RF (SMA female) connectors
+  * FPGA GPIO headers (unpopulated)
+  * FPGA JTAG connector (unpopulated)
+  * FAN (5V default or 3.3V) connector
+
+* Clock system:
+
+  * 40.00MHz on board VCTCXO
+  * VCTCXO can be tuned by onboard DAC
+  * Reference clock input and output connectors (U.FL)
+
+* Board size: 69mm x 31.4mm
+
+* Board power source: USB connector (5V)
+
+For more information on the following topics, refer to the corresponding documents:
+
+* `FTDI FT601 USB 3.0 to FIFO Bridge datasheet <https://ftdichip.com/wp-content/uploads/2020/07/DS_FT600Q-FT601Q-IC-Datasheet.pdf>`_
+* `Lattice ECP5 and ECP5-5G Family data sheet <https://www.latticesemi.com/view_document?document_id=50461>`_
+* `Lime Microsystems LMS7002M transceiver datasheet <https://limemicro.com/silicon/lms7002m/>`_
+
+Board Overview
+--------------
+
+The heart of the LimeSDR Mini board is Lattice ECP5 (LFE5U-45F) FPGA. It’s main function is to transfer digital data between the PC through a USB 3.0 connector. The block diagram for LimeSDR Mini board is presented in the Figure 3.
+
+.. figure:: images/LimeSDR-Mini_v2.2_diagrams_r0_block.png
+  :width: 600
+  
+  Figure 3: LimeSDR Mini v2.2 Development Board Block Diagram
+
+This section contains component location description on the board. LimeSDR Mini board picture with highlighted connectors and main components are presented in Figure 4 and Figure 5.
+
+.. _target1:
+
+.. figure:: images/LimeSDR-Mini_v2.2_components_top.png
+  :width: 600
+  
+  Figure 4: LimeSDR Mini v2.2 board top connectors and main components
+
+.. figure:: images/LimeSDR-Mini_v2.2_components_bot.png
+  :width: 600
+  
+  Figure 5: LimeSDR Mini v2.2 board bottom connectors and main components
+
+Description of board components is given in the Table 1.
+
+.. table:: Table 1. Board components
+
+  +--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+  | **Featured Devices**                                                                                                                                         |
+  +==============================================+=========================+=====================================================================================+
+  | **Board Reference**                          | **Type**                | **Description**                                                                     |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | IC1                                          | RF transceiver          | Lime Microsystems LMS7002M                                                          |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | IC7                                          | FPGA                    | Lattice Semiconductor’s LFE5U (LFE5U-45F)                                           |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | IC8                                          | USB 3.0 microcontroller | FTDI USB 3.0 to FIFO interface bridge chip FT601                                    |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | **Miscellaneous devices**                    |                         |                                                                                     |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | IC10                                         | IC                      | Temperature sensor LM75                                                             |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | **Configuration, Status and Setup Elements**                                                                                                                 |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | J5                                           | JTAG chain connector    | FPGA programming pin header on the board edge for JTAG cable, 0.1” pitch            |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | LED1, LED2, LED3                             | Red-green status LEDs   | User defined FPGA indication LED.                                                   |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | **General User Input/Output**                                                                                                                                |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | J3                                           | Pin header              | 8x FPGA GPIOs, 3.3V, 0.05” pitch                                                    |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | J4                                           | Pin header              | 2x FPGA GPIOs on the board edge, 3.3V, 0.1” pitch                                   |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | J9                                           | Pin header              | 5V (3.3V voltage can be chosen by resistors) fan connection pin headers, 0.1” pitch |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | **Memory Devices**                                                                                                                                           |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | IC2                                          | IC                      | I²C EEPROM Memory 128Kb (16 x 8), connected to RF transceiver I2C bus               |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | IC12                                         | IC                      | I²C EEPROM Memory 128Kb (16K x 8), connected to FPGA I2C bus                        |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | IC15                                         | IC                      | Quad SPI Flash Memory 128 Mb (16M x 8) connected to FPGA SPI                        |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | **Communication Ports**                                                                                                                                      |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | J6                                           | USB 3.0 connector       | USB 3.0 (type A) plug                                                               |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | **Clock Circuitry**                                                                                                                                          |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | XO1                                          | VCTCXO                  | 40.00 MHz Voltage Controlled Temperature Compensated Crystal Oscillator             |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | IC11                                         | IC                      | 10 bit DAC for TCXO (XT4) frequency tuning (default)                                |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | IC16                                         | IC                      | 16 bit DAC for TCXO (XT4) frequency tuning (unpopulated)                            |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | IC17                                         | IC                      | Voltage reference (unpopulated)                                                     |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | IC9                                          | IC                      | Clock buffer                                                                        |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | J8                                           | U.FL connector          | Reference clock input                                                               |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | J7                                           | U.FL connector          | Reference clock output                                                              |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | **Power Supply**                                                                                                                                             |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | IC14                                         | IC                      | Switching regulator LMZ20501 (1.8V rail)                                            |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | IC19                                         | IC                      | Switching regulator LMZ20501 (3.3V rail)                                            |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | IC13                                         | IC                      | Linear regulator LD39100PUR (1.1V rail)                                             |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | IC5                                          | IC                      | Linear regulator LD39100PUR (1.25V rail)                                            |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | IC6                                          | IC                      | Linear regulator LD39100PUR (1.4V rail)                                             |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+  | IC18                                         | IC                      | Linear regulator LD39100PUR (2.5V rail)                                             |
+  +----------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+
 Board Description
 =================
 
@@ -8,14 +193,14 @@ RF transceiver digital connectivity
 
 The interface and control signals are described below:
 
-* Digital Interface Signals: LENS7002 is using data bus LIMNS_DIQ1_D[11:0] and LMS_DIQ2_D[11:0], LMS_EN_IQSEL1 and LMS_EN_IQSEL2, LMS_FCLK1 and LMS_FCLK2, LMS_MCLK1 and LMS_MCLK2 signals to transfer data to/from FPGA. Indexes 1 and 2 indicate transceiver digital data PORT-1 or PORT-2. Any of these ports can be used to transmit or receive data. By default PORT-1 is selected as transmit port and PORT-2 is selected as receiver port. The FCLK# is input clock and MCLK# is output clock for LMS7002M transceiver. TXNRX signals sets ports directions. For LMS7002M interface timing details refer to `LMS7002M transceiver datasheet <https://limemicro.com/app/uploads/2017/07/LMS7002M-Data-Sheet-v3.1r00.pdf>`_ page 12-13.
+* Digital Interface Signals: LENS7002 is using data bus LIMNS_DIQ1_D[11:0] and LMS_DIQ2_D[11:0], LMS_EN_IQSEL1 and LMS_EN_IQSEL2, LMS_FCLK1 and LMS_FCLK2, LMS_MCLK1 and LMS_MCLK2 signals to transfer data to/from FPGA. Indexes 1 and 2 indicate transceiver digital data PORT-1 or PORT-2. Any of these ports can be used to transmit or receive data. By default PORT-1 is selected as transmit port and PORT-2 is selected as receiver port. The FCLK# is input clock and MCLK# is output clock for LMS7002M transceiver. TXNRX signals sets ports directions. For LMS7002M interface timing details refer to `LMS7002M transceiver datasheet <https://limemicro.com/silicon/lms7002m/>`_ page 12-13.
 * LMS Control Signals: these signals are used for optional functionality:
   * LMS_RXEN, LMS_TXEN – receiver and transmitter enable/disable signals connected to FPGA Bank 8 (VDIO_LMS_FPGA; 2.5V).
   * LMS_RESET – LMS7002M reset connected to FPGA Bank 3 (VDIO_LMS_FPGA; 2.5V).
 * SPI Interface: LMS7002M transceiver is configured via 4-wire SPI interface; FPGA_SPI_SCLK, FPGA_SPI_MOSI, FPGA_SPI_MISO, FPGA_SPI_LMS_SS. The SPI interface controlled from FPGA Bank 3 (VDIO_LMS_FPGA; 2.5V). 
 * LMS I2C Interface: can be used for LMS EEPROM content modifying or for debug purposes. The signals LMS_I2C_SCL, LMS_I2C_DATA connected to EEPROM.
 
-.. table:: Table 1. RF transceiver (LMS7002) digital interface pins
+.. table:: Table 2. RF transceiver (LMS7002) digital interface pins
 
   +--------------------+--------------------------+---------------------------+--------------+-----------------------+------------------------------+
   | **Chip pin (IC1)** | **Chip reference (IC1)** | **Schematic signal name** | **FPGA pin** | **FPGA I/O standard** | **FPGA I/O standard**        |
@@ -112,16 +297,16 @@ The interface and control signals are described below:
 RF path and control signals
 ---------------------------
 
-LimeSDR Mini RF path contains matching networks, RF switches, loopback variable attenuator and 2 SMA connectors (J1 - TX and J2 - RX) as shown in Figure 1.
+LimeSDR Mini RF path contains matching networks, RF switches, loopback variable attenuator and 2 SMA connectors (J1 - TX and J2 - RX) as shown in Figure 6.
 
 .. figure:: images/LimeSDR-Mini_v2.2_diagrams_r0_RF.png
   :width: 600
   
-  Figure 1: LimeSDR Mini v2.2 RF diagram
+  Figure 6: LimeSDR Mini v2.2 RF diagram
 
-RF transceiver TX and RX ports has its dedicated matching network which together determines the working frequency range. More detailed information about RF transceiver ports and matching network frequency ranges is listed in the Table 2.
+RF transceiver TX and RX ports has its dedicated matching network which together determines the working frequency range. More detailed information about RF transceiver ports and matching network frequency ranges is listed in the Table 3.
 
-.. table:: Table 2. RF transceiver ports and matching networks frequency ranges
+.. table:: Table 3. RF transceiver ports and matching networks frequency ranges
 
   +-------------------------------+--------------------------------------+
   | **RF transceiver port**       | **Frequency range**                  |
@@ -135,22 +320,22 @@ RF transceiver TX and RX ports has its dedicated matching network which together
   | RX1_W                         | 700 MHz - 900 MHz                    |
   +-------------------------------+--------------------------------------+
 
-RF path control signals are described in the Table 3.
+RF path control signals are described in the Table 4.
 
-.. table:: Table 3. RF path control signals
+.. table:: Table 4. RF path control signals
 
   +------------------------+---------------------------+------------------+--------------+-------------------------------------------------------------------------------------------------+
   | **Component**          | **Schematic signal name** | **I/O standard** | **FPGA pin** | **Description**                                                                                 |
   +========================+===========================+==================+==============+=================================================================================================+
-  | RFSW_TX                | RFSW_TX_V1                | 3.3V             | B10          | V1 – high V2- low TX1_1 to TX and TX1_2 to ATT, V1 – low V2 – high TX1_1 to ATT and TX1_2 to TX |
+  | RFSW_TX                | RFSW_TX_V1                | 3.3V             | B10          | V1 – high V2- low TX1_1 to TX and TX1_2 to ATT,                                                 |
   |                        |                           |                  |              |                                                                                                 |
-  | (SKY13411-374LF – IC3) |                           |                  |              |                                                                                                 |
+  | (SKY13411-374LF – IC3) |                           |                  |              | V1 – low V2 – high TX1_1 to ATT and TX1_2 to TX                                                 |
   +------------------------+---------------------------+------------------+--------------+-------------------------------------------------------------------------------------------------+
   |                        | RFSW_TX_V2                | 3.3V             | C9           |                                                                                                 |
   +------------------------+---------------------------+------------------+--------------+-------------------------------------------------------------------------------------------------+
-  | RFSW_RX                | RFSW_RX_V1                | 3.3V             | C11          | V1 – high V2- low RX_H to RX and RX1_W to ATT, V1 – low V2 – high RX1_H to ATT and RX1_W to RX  |
+  | RFSW_RX                | RFSW_RX_V1                | 3.3V             | C11          | V1 – high V2- low RX_H to RX and RX1_W to ATT,                                                  |
   |                        |                           |                  |              |                                                                                                 |
-  | (SKY13411-374LF – IC3) |                           |                  |              |                                                                                                 |
+  | (SKY13411-374LF – IC3) |                           |                  |              | V1 – low V2 – high RX1_H to ATT and RX1_W to RX                                                 |
   +------------------------+---------------------------+------------------+--------------+-------------------------------------------------------------------------------------------------+
   |                        | RFSW_RX_V2                | 3.3V             | B11          |                                                                                                 |
   +------------------------+---------------------------+------------------+--------------+-------------------------------------------------------------------------------------------------+
@@ -162,19 +347,19 @@ RF path control signals are described in the Table 3.
 Notes on RF loopback
 --------------------
 
-LimeSDR Mini v2.X encountered a change of shunt transistor VT3 in the RF feedback attenuator chain due to the original part becoming EOL. The original part BFT92,215 had a small output capacitance of around 1.2 pF, whereas the new RF transistor ZVN4525E6TA has a larger output capacitance of 11 pF. An extract of the schematic is presented in Figure 2.
+LimeSDR Mini v2.X encountered a change of shunt transistor VT3 in the RF feedback attenuator chain due to the original part becoming EOL. The original part BFT92,215 had a small output capacitance of around 1.2 pF, whereas the new RF transistor ZVN4525E6TA has a larger output capacitance of 11 pF. An extract of the schematic is presented in Figure 7.
 
 .. figure:: images/LimeSDR-Mini_Attenuator_v1_vs_v2.png
   :width: 600
   
-  Figure 2: LimeSDR Mini RF loopback attenuator implementation on v1.x and v2.x boards
+  Figure 7: LimeSDR Mini RF loopback attenuator implementation on v1.x and v2.x boards
 
-The increased shunt capacitance affects a frequency response of the attenuator as shown in Figure 3. The attenuation is −46 dB at 1 GHz and −52 dB at 2.1 GHz for the new LimeSDR-Mini v2.X board. The frequency response shown in Figure 3 can be used as a reference RF loopback attenuation in the supported frequency range. 
+The increased shunt capacitance affects a frequency response of the attenuator as shown in Figure 3. The attenuation is −46 dB at 1 GHz and −52 dB at 2.1 GHz for the new LimeSDR-Mini v2.X board. The frequency response shown in Figure 8 can be used as a reference RF loopback attenuation in the supported frequency range. 
 
 .. figure:: images/LimeSDR-Mini_v2.2_RF_LB_response.png
   :width: 600
   
-  Figure 3: LimeSDR Mini v2.2 RF loopback frequency response
+  Figure 8: LimeSDR Mini v2.2 RF loopback frequency response
 
 
 USB 3.0 controller
@@ -186,9 +371,9 @@ Software controls LimeSDR Mini board via the USB 3.0 controller (FTDI USB 3.0 to
 * FT_TXEn, FT_RXFn, FT_SIWUn, FT_WRn, FT_RDn, FT_OEn, FT_BE[3:0] – FTDI interface control signals.
 * FT_CLK – FTDI interface clock. Clock from FTDI is fed to FPGA.
 
-More information about USB 3.0 controller (FTDI) pins, schematic signal names, FPGA interconnections and I/O standards is given in Table 4.
+More information about USB 3.0 controller (FTDI) pins, schematic signal names, FPGA interconnections and I/O standards is given in Table 5.
 
-.. table:: Table 4. USB 3.0 controller (FTDI) pins
+.. table:: Table 5. USB 3.0 controller (FTDI) pins
 
   +--------------------+--------------------------+---------------------------+--------------+------------------+-------------+
   | **Chip pin (IC6)** | **Chip reference (IC6)** | **Schematic signal name** | **FPGA pin** | **I/O standard** | **Comment** |
@@ -292,11 +477,11 @@ LimeSDR Mini board comes with three dual colour (red and green (RG)) indication 
 .. figure:: images/LimeSDR-Mini_v2.2_components_LEDs.png
   :width: 600
   
-  Figure 4: LimeSDR Mini indication LEDs (top and bottom)
+  Figure 9: LimeSDR Mini indication LEDs (top and bottom)
 
-LEDs are connected to FPGA and their function may be programmed according to the user requirements. Default function of LEDs and related information is listed in Table 5.
+LEDs are connected to FPGA and their function may be programmed according to the user requirements. Default function of LEDs and related information is listed in Table 6.
 
-.. table:: Table 5. Default LED functions
+.. table:: Table 6. Default LED functions
 
   +---------------------+--------------------+-----------------+--------------+--------------------------------------------+
   | **Board reference** | **Schematic name** | **Board label** | **FPGA pin** | **Comment**                                |
@@ -339,9 +524,9 @@ Low speed interfaces
 
 To control on board infrastructure various low speed interfaces are implemented. 
 
-LMS7002M RF transceiver and VCTCXO DAC are controlled via SPI interface. Deatils of this interface are given in Table 6.
+LMS7002M RF transceiver and VCTCXO DAC are controlled via SPI interface. Deatils of this interface are given in Table 7.
 
-.. table:: Table 6. FPGA_SPI interface pins
+.. table:: Table 7. FPGA_SPI interface pins
 
   +---------------------------+--------------+------------------+----------------------------------------------+
   | **Schematic signal name** | **FPGA pin** | **I/O standard** | **Comment**                                  |
@@ -357,9 +542,9 @@ LMS7002M RF transceiver and VCTCXO DAC are controlled via SPI interface. Deatils
   | FPGA_SPI_DAC_SS           | L4           | 2.5V /3.3V       | IC11 SPI slave select (FPGA output)          |
   +---------------------------+--------------+------------------+----------------------------------------------+
 
-FPGA configuration flash memory is connected via separate SPI bus, more information is given in Table 7.
+FPGA configuration flash memory is connected via separate SPI bus, more information is given in Table 8.
 
-.. table:: Table 7. FPGA_CFG_SPI interface pins
+.. table:: Table 8. FPGA_CFG_SPI interface pins
 
   +---------------------------+--------------+------------------+-------------------------------------+
   | **Schematic signal name** | **FPGA pin** | **I/O standard** | **Comment**                         |
@@ -373,9 +558,9 @@ FPGA configuration flash memory is connected via separate SPI bus, more informat
   | FPGA_CFG_SPI_SS           | U17          | 3.3V             | IC15 SPI slave select (FPGA output) |
   +---------------------------+--------------+------------------+-------------------------------------+
 
-There is temperature sensor and EEPROM memory connected to the FPGA via I2C bus. Deatils of this interface are given in Table 8.
+There is temperature sensor and EEPROM memory connected to the FPGA via I2C bus. Deatils of this interface are given in Table 9.
 
-.. table:: Table 8. FPGA_I2C interface pins
+.. table:: Table 9. FPGA_I2C interface pins
 
   +----------------------+--------------------+------------------+------------------+-------------+
   | **I2C slave device** | **Slave device**   | **I2C address**  | **I/O standard** | **Comment** |
@@ -388,9 +573,9 @@ There is temperature sensor and EEPROM memory connected to the FPGA via I2C bus.
 GPIO connectors
 ---------------
 
-Eight GPIOs from FPGA are connected to 10 pin 0.05” header. Additional 2 pins are dedicated for power. FPGA_GPIO[7:4] are shared with TX and RX LEDs. Remove solder from solder bridges to disconnect LEDs from GPIOs lines if required. More information about GPIO connector J3 is given in Table 9.
+Eight GPIOs from FPGA are connected to 10 pin 0.05” header. Additional 2 pins are dedicated for power. FPGA_GPIO[7:4] are shared with TX and RX LEDs. Remove solder from solder bridges to disconnect LEDs from GPIOs lines if required. More information about GPIO connector J3 is given in Table 10.
 
-.. table:: Table 9. FPGA GPIO connector (J3) pins
+.. table:: Table 10. FPGA GPIO connector (J3) pins
 
   +-------------------+---------------------------+--------------+------------------+-------------------------------------------------+
   | **Connector pin** | **Schematic signal name** | **FPGA pin** | **I/O standard** | **Comment**                                     |
@@ -416,29 +601,22 @@ Eight GPIOs from FPGA are connected to 10 pin 0.05” header. Additional 2 pins 
   | 10                |                           | -            |                  | Selectable power net (3.3V or 5V). Default 3.3V |
   +-------------------+---------------------------+--------------+------------------+-------------------------------------------------+
 
-Another 2 GPIOs are connected to 5 pin header on the board edge. More information about FPGA_EGPIO connector J7 is given in Table 10.
+Another 2 GPIOs are connected to 5 pin header on the board edge. More information about FPGA_EGPIO connector J7 is given in Table 11.
 
-.. table:: Table 10. FPGA EGPIO connector (J4) pins
+.. table:: Table 11. FPGA EGPIO connector (J4) pins
 
-  +-------------------+---------------------------+--------------+------------------+-------------------------------+
-  | **Connector pin** | **Schematic signal name** | **FPGA pin** | **I/O standard** | **Comment**                   |
-  +===================+===========================+==============+==================+===============================+
-  | 1                 | GND                       |              |                  | Ground pin                    |
-  +-------------------+---------------------------+--------------+------------------+-------------------------------+
-  | 2                 | FPGA_EGPIO0               | A10          | 3.3V             |                               |
-  +-------------------+---------------------------+--------------+------------------+-------------------------------+
-  | 3                 | FPGA_EGPIO1               | A8           | 3.3V             |                               |
-  +-------------------+---------------------------+--------------+------------------+-------------------------------+
-  | 4                 | VCC3P3                    |              | 3.3V             | Power net (3.3V)              |
-  +-------------------+---------------------------+--------------+------------------+-------------------------------+
-  | 5                 | VCC5P0                    |              | 5.0V             | Power net (5.0V)              |
-  +-------------------+---------------------------+--------------+------------------+-------------------------------+
-
-JTAG interface
---------------
-
-To debug FPGA design, flash bitstream to FPGA and/or Flash memory JTAG is used. It is located on the PCB top side (see :ref:`target1`) and attaches to the programmer using 7-pin, 0.1” spaced JTAG connector J5. JTAG connector pins, schematic signal names, FPGA interconnections and I/O standards are listed in Table 11.
-
+  +-------------------+---------------------------+--------------+------------------+-------------------------------------------------+
+  | **Connector pin** | **Schematic signal name** | **FPGA pin** | **I/O standard** | **Comment**                                     |
+  +===================+===========================+==============+==================+=================================================+
+  | 1                 | GND                       |              |                  | Ground pin                                      |
+  +-------------------+---------------------------+--------------+------------------+-------------------------------------------------+
+  | 2                 | FPGA_EGPIO0               | A10          | 3.3V             |                                                 |
+  +-------------------+---------------------------+--------------+------------------+-------------------------------------------------+
+  | 3                 | FPGA_EGPIO1               | A8           | 3.3V             |                                                 |
+  +-------------------+---------------------------+--------------+------------------+-------------------------------------------------+
+  | 4                 | VCC3P3                    |              | 3.3V             | Power net (3.3V)                                |
+  +-------------------+---------------------------+--------------+------------------+-------------------------------------------------+
+  | 5                 | VCC5P0                    |              | 5.0V             | Power net (5.0V)                                |
   +-------------------+---------------------------+--------------+------------------+-------------------------------------------------+
   | 6                 | FPGA_GPIO5                | R18          | 3.3V             | Shared with FPGA_LED2_R                         |
   +-------------------+---------------------------+--------------+------------------+-------------------------------------------------+
@@ -451,9 +629,12 @@ To debug FPGA design, flash bitstream to FPGA and/or Flash memory JTAG is used. 
   | 10                |                           | -            |                  | Selectable power net (3.3V or 5V). Default 3.3V |
   +-------------------+---------------------------+--------------+------------------+-------------------------------------------------+
 
-Another 2 GPIOs are connected to 5 pin header on the board edge. More information about FPGA_EGPIO connector J7 is given in Table 10.
+JTAG interface
+--------------
 
-.. table:: Table 11. JTAG connector J5 pins
+To debug FPGA design, flash bitstream to FPGA and/or Flash memory JTAG is used. It is located on the PCB top side (see :ref:`target1`) and attaches to the programmer using 7-pin, 0.1” spaced JTAG connector J5. JTAG connector pins, schematic signal names, FPGA interconnections and I/O standards are listed in Table 12.
+
+.. table:: Table 12. JTAG connector J5 pins
 
   +-------------------+---------------------------+--------------+------------------+--------------------+
   | **Connector pin** | **Schematic signal name** | **FPGA pin** | **I/O standard** | **Comment**        |
@@ -485,7 +666,7 @@ Fan will be turned on if board will heat up to 55°C and FAN will be turned off 
 .. figure:: images/LimeSDR-Mini_v2.2_temp_hysteresis.png
   :width: 600
   
-  Figure 5: FAN control temperature hysteresis 
+  Figure 10: FAN control temperature hysteresis 
 
 Clock distribution
 ------------------
@@ -495,11 +676,11 @@ LimeSDR Mini board clock distribution block diagram is presented in Figure 6. Li
 .. figure:: images/LimeSDR-Mini_v2.2_diagrams_r0_clock.png
   :width: 600
   
-  Figure 6: LimeSDR Mini v2.2 board clock distribution block diagram
+  Figure 11: LimeSDR Mini v2.2 board clock distribution block diagram
 
-Rakon E7355LF 40 MHz voltage controlled temperature compensated crystal oscillator (VCTCXO) is main board clock source. VCTCXO frequency can be tuned by using DAC (IC11 10 bit or IC16 16 bit (unpopulated)). Main VCTCXO parameters are listed in Table 12.
+Rakon E7355LF 40 MHz voltage controlled temperature compensated crystal oscillator (VCTCXO) is main board clock source. VCTCXO frequency can be tuned by using DAC (IC11 10 bit or IC16 16 bit (unpopulated)). Main VCTCXO parameters are listed in Table 13.
 
-.. table:: Table 12. Rakon E7355LF VCTCXO main parameters
+.. table:: Table 13. Rakon E7355LF VCTCXO main parameters
 
   +----------------------------------------+----------------------------------+
   | **Frequency parameter**                | **Value**                        |
@@ -517,9 +698,9 @@ Rakon E7355LF 40 MHz voltage controlled temperature compensated crystal oscillat
   | Slope                                  | +9 ppm/V                         |
   +----------------------------------------+----------------------------------+
 
-VCTCXO clock is connected to clock buffer IC9. Buffered VCTCXO clock is connected to RF transceiver, FPGA. Buffered VCTCXO clock is also connected to connector J7 (REF_CLK_OUT) and can be fed to external hardware for synchronisation. VCTCXO clock can be disconnected from clock buffer input (remove R63 and solder R66) and external reference clock can be supplied from connector J8 (REF_CLK_IN) instead of VCTCXO (40 MHz). Main board clock lines and other related information are listed in Table 13.
+VCTCXO clock is connected to clock buffer IC9. Buffered VCTCXO clock is connected to RF transceiver, FPGA. Buffered VCTCXO clock is also connected to connector J7 (REF_CLK_OUT) and can be fed to external hardware for synchronisation. VCTCXO clock can be disconnected from clock buffer input (remove R63 and solder R66) and external reference clock can be supplied from connector J8 (REF_CLK_IN) instead of VCTCXO (40 MHz). Main board clock lines and other related information are listed in Table 14.
 
-.. table:: Table 13. Rakon E7355LF VCTCXO main parameters
+.. table:: Table 14. Rakon E7355LF VCTCXO main parameters
 
   +--------------------------+---------------------------+------------------+--------------+--------------------------------------------+
   | **Source**               | **Schematic signal name** | **I/O standard** | **FPGA pin** | **Description**                            |
@@ -548,42 +729,42 @@ VCTCXO clock is connected to clock buffer IC9. Buffered VCTCXO clock is connecte
 Power distribution
 ------------------
 
-LimeSDR Mini board is powered from USB port (5V). LimeSDR Mini board power delivery network consists of different power rails with different voltages, filters, power sequences. LimeSDR Mini board power distribution block diagram is presented in Figure 7.
+LimeSDR Mini board is powered from USB port (5V). LimeSDR Mini board power delivery network consists of different power rails with different voltages, filters, power sequences. LimeSDR Mini board power distribution block diagram is presented in Figure 12.
 
 .. figure:: images/LimeSDR-Mini_v2.2_diagrams_r0_power.png
   :width: 600
   
-  Figure 7: LimeSDR Mini v2.2 board power distribution block diagram
+  Figure 12: LimeSDR Mini v2.2 board power distribution block diagram
 
 Fan mounting
 ------------
 
-LimeSDR Mini v2.2 board features three holes which may be used to secure the board into the case or fan mounting for instance as shown in Figure 8. Two holes are placed at the sides of USB connector and one more hole is between SMA connectors. 
+LimeSDR Mini v2.2 board features three holes which may be used to secure the board into the case or fan mounting for instance as shown in Figure 13. Two holes are placed at the sides of USB connector and one more hole is between SMA connectors. 
 
 .. figure:: images/LimeSDR-Mini_v2.2_fan_mounting_1.png
   :width: 600
   
-  Figure 8: LimeSDR Mini v2.2 fan mounting
+  Figure 13: LimeSDR Mini v2.2 fan mounting
 
 .. warning::
-  You have to be careful when using mounting holes not to damage R72 resistor and C186 capacitor while there is no much clearence as you may see in Figure 9.
+  You have to be careful when using mounting holes not to damage R72 resistor and C186 capacitor while there is no much clearence as you may see in Figure 14.
 
 .. figure:: images/LimeSDR-Mini_v2.2_fan_mounting_2.png
   :width: 600
   
-  Figure 10: LimeSDR Mini v2.2 mounting hole clearence
+  Figure 14: LimeSDR Mini v2.2 mounting hole clearence
 
-Recommended fan mounting solution is shown in Figure 8.
+Recommended fan mounting solution is shown in Figure 15.
 
 .. figure:: images/LimeSDR-Mini_v2.2_fan_mounting_3.png
   :width: 600
   
-  Figure 11: FIX-TP2-5 fan mounting components
+  Figure 15: FIX-TP2-5 fan mounting components
 
 .. figure:: images/LimeSDR-Mini_v2.2_fan_mounting_4.png
   :width: 600
   
-  Figure 12: FIX-HP2-5 fan mounting components
+  Figure 16: FIX-HP2-5 fan mounting components
 
 Use two FIX-TP2-5 stands with internal and external thread (4mm width, M2 thread) as a spacers to mount the fan on top of LimeSDR Mini v2.2. Put FIX-TP2-5 stands from the top through LimeSDR Mini v2.2 slot mounting holes around USB connector as shown in Figure 11. Secure the stands to the fan using two M2 thread screws (ex. P/N 1219480, Phillips head screw, M2x10). Secure two FIX-TP2-5 stands using two FIX-HP2-5 spacers as nuts from the bottom of the PCB as shown in Figure 12. This is enough to hold the fan but one may use additional FIX-HP2-5 (4mm width, M2 thread) stand with internal thread as an additional fan rest point which rests on PCB over unmounted J3 connector as shown in Figures 11 and 12. Secure FIX-HP2-5 spacer to the fan using the same screw (P/N 1219480).
 
@@ -593,3 +774,4 @@ Total required mechanical components per LimeSDR Mini v2.2:
 * 3x `FIX-HP2-5 <https://www.tme.eu/en/details/fix-hp2-5/plastic-standoffs/fix-fasten/>`_ stands with internal M2 threads;
 * 3x `1219480 <https://www.tme.eu/en/details/b2x10_bn1435/bolts/bossard/1219480/>`_ screws; M2x10 10mm length;
 * 1x `4127/MF30060V1-1000U-A99 <https://www.digikey.com/en/products/detail/sunon-fans/4127-MF30060V1-1000U-A99/9838567>`_ 30mm fan.
+
