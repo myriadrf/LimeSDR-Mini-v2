@@ -1,5 +1,8 @@
-JTAG programming
+.. _target3:
+
+JTAG Programming
 ================
+
 
 This section describes how to program the Lattice LFE5U FPGA used on the LimeSDR Mini v2 board using JTAG interface, FT2232H Mini Module and Lattice software.
 
