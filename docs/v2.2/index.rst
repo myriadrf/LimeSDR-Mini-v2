@@ -195,8 +195,10 @@ The interface and control signals are described below:
 
 * Digital Interface Signals: LENS7002 is using data bus LIMNS_DIQ1_D[11:0] and LMS_DIQ2_D[11:0], LMS_EN_IQSEL1 and LMS_EN_IQSEL2, LMS_FCLK1 and LMS_FCLK2, LMS_MCLK1 and LMS_MCLK2 signals to transfer data to/from FPGA. Indexes 1 and 2 indicate transceiver digital data PORT-1 or PORT-2. Any of these ports can be used to transmit or receive data. By default PORT-1 is selected as transmit port and PORT-2 is selected as receiver port. The FCLK# is input clock and MCLK# is output clock for LMS7002M transceiver. TXNRX signals sets ports directions. For LMS7002M interface timing details refer to `LMS7002M transceiver datasheet <https://limemicro.com/silicon/lms7002m/>`_ page 12-13.
 * LMS Control Signals: these signals are used for optional functionality:
+
   * LMS_RXEN, LMS_TXEN – receiver and transmitter enable/disable signals connected to FPGA Bank 8 (VDIO_LMS_FPGA; 2.5V).
   * LMS_RESET – LMS7002M reset connected to FPGA Bank 3 (VDIO_LMS_FPGA; 2.5V).
+
 * SPI Interface: LMS7002M transceiver is configured via 4-wire SPI interface; FPGA_SPI_SCLK, FPGA_SPI_MOSI, FPGA_SPI_MISO, FPGA_SPI_LMS_SS. The SPI interface controlled from FPGA Bank 3 (VDIO_LMS_FPGA; 2.5V). 
 * LMS I2C Interface: can be used for LMS EEPROM content modifying or for debug purposes. The signals LMS_I2C_SCL, LMS_I2C_DATA connected to EEPROM.
 
@@ -340,7 +342,7 @@ RF path control signals are described in the Table 4.
   |                        | RFSW_RX_V2                | 3.3V             | B11          |                                                                                                 |
   +------------------------+---------------------------+------------------+--------------+-------------------------------------------------------------------------------------------------+
   | Variable attenuator    | TX_LB_AT                  | 3.3V             | C8           | High - -40dB, low - -25dB                                                                       |
-  +------------------------+---------------------------+------------------+--------------+-------------------------------------------------------------------------------------------------+
+  +                        +---------------------------+------------------+--------------+-------------------------------------------------------------------------------------------------+
   |                        | TX_LB_SH                  | 3.3V             | B8           | Attenuator shunting.                                                                            |
   +------------------------+---------------------------+------------------+--------------+-------------------------------------------------------------------------------------------------+
 
@@ -365,7 +367,7 @@ The increased shunt capacitance affects a frequency response of the attenuator a
 USB 3.0 controller
 ------------------
 
-Software controls LimeSDR Mini board via the USB 3.0 controller (FTDI USB 3.0 to FIFO interface bridge chip FT601 [link]). The controller signals description showed below:
+Software controls LimeSDR Mini board via the USB 3.0 controller (`FTDI USB 3.0 to FIFO interface bridge chip FT601 <https://ftdichip.com/products/ft600q-b/>`_). The controller signals description showed below:
 
 * FT_D[31:0] – FTDI 32-bit data interface is connected to FPGA.
 * FT_TXEn, FT_RXFn, FT_SIWUn, FT_WRn, FT_RDn, FT_OEn, FT_BE[3:0] – FTDI interface control signals.
@@ -491,7 +493,7 @@ LEDs are connected to FPGA and their function may be programmed according to the
   |                     |                    |                 |              | Blinking green = LMK_CLK clock is running; |
   |                     |                    |                 |              |                                            |
   |                     |                    |                 |              | Red = USB control port is active.          |
-  +---------------------+--------------------+-----------------+--------------+--------------------------------------------+
+  |                     +--------------------+-----------------+--------------+                                            |
   |                     | FPGA_LED1_G        |                 | R16          |                                            |
   +---------------------+--------------------+-----------------+--------------+--------------------------------------------+
   | LED2                | FPGA_LED2_R        | LED2            | R18          | RX status:                                 |
@@ -501,7 +503,7 @@ LEDs are connected to FPGA and their function may be programmed according to the
   |                     |                    |                 |              | Off = DIQ data receive disabled.           |
   |                     |                    |                 |              |                                            |
   |                     |                    |                 |              | Shared with FPGA_GPIO4 and FPGA_GPIO5.     |
-  +---------------------+--------------------+-----------------+--------------+--------------------------------------------+
+  |                     +--------------------+-----------------+--------------+                                            |
   |                     | FPGA_LED2_G        |                 | M18          |                                            |
   |                     |                    |                 |              |                                            |
   |                     |                    |                 | (FPGA_GPIO4) |                                            |
@@ -513,7 +515,7 @@ LEDs are connected to FPGA and their function may be programmed according to the
   |                     |                    |                 |              | Off = no activity.                         |
   |                     |                    |                 |              |                                            |
   |                     |                    |                 |              | Shared with FPGA_GPIO6 and FPGA_GPIO7.     |
-  +---------------------+--------------------+-----------------+--------------+--------------------------------------------+
+  |                     +--------------------+-----------------+--------------+                                            |
   |                     | FPGA_LED3_G        |                 | T17          |                                            |
   |                     |                    |                 |              |                                            |
   |                     |                    |                 | (FPGA_GPIO6) |                                            |
@@ -654,7 +656,7 @@ To debug FPGA design, flash bitstream to FPGA and/or Flash memory JTAG is used. 
   | 7                 | VCC5P0                    |              |                  | Power (5.0V)       |
   +-------------------+---------------------------+--------------+------------------+--------------------+
 
-More information about JTAG programming can be found in section 3.
+More information about JTAG programming can be found in :ref:`target3`.
 
 Board temperature control
 -------------------------
@@ -712,15 +714,15 @@ VCTCXO clock is connected to clock buffer IC9. Buffered VCTCXO clock is connecte
   | Clock buffer (IC9)       | LMK_CLK                   | 3.3V             | A9           | Reference clock connected to FPGA          |
   +--------------------------+---------------------------+------------------+--------------+--------------------------------------------+
   | RF transceiver (IC1)     | RxPLL_CLK                 | 1.8V             | -            | Reference clock input                      |
-  +--------------------------+---------------------------+------------------+--------------+--------------------------------------------+
+  |                          +---------------------------+------------------+--------------+--------------------------------------------+
   |                          | TxPLL_CLK                 | 1.8V             | -            | Reference clock input                      |
-  +--------------------------+---------------------------+------------------+--------------+--------------------------------------------+
+  |                          +---------------------------+------------------+--------------+--------------------------------------------+
   |                          | LMS_MCLK1                 | 2.5V/3.3V        | H4           |                                            |
-  +--------------------------+---------------------------+------------------+--------------+--------------------------------------------+
+  |                          +---------------------------+------------------+--------------+--------------------------------------------+
   |                          | LMS_FCLK1                 | 2.5V/3.3V        | H3           |                                            |
-  +--------------------------+---------------------------+------------------+--------------+--------------------------------------------+
+  |                          +---------------------------+------------------+--------------+--------------------------------------------+
   |                          | LMS_MCLK2                 | 2.5V/3.3V        | D2           |                                            |
-  +--------------------------+---------------------------+------------------+--------------+--------------------------------------------+
+  |                          +---------------------------+------------------+--------------+--------------------------------------------+
   |                          | LMS_FCLK2                 | 2.5V/3.3V        | D1           |                                            |
   +--------------------------+---------------------------+------------------+--------------+--------------------------------------------+
   | USB 3.0 controller (IC8) | FT_CLK                    | 3.3V             | D17          | Clock output (100 MHz) from USB controller |

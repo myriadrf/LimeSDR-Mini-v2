@@ -32,6 +32,8 @@ LimeSDR Mini board features:
   * Sample rate: 30.72 MSPS
   * Transmit power: max 10 dBm (depending on frequency)
 
+* USB 3.0 controller: FTDI FT601
+
 * FPGA: board is designed for Lattice ECP5 family LFE5U-25F/LFE5U-45F/LFE5U-85F FPGAs in 285-ball csfBGA package. By default board is assembled with LFE5U-45F-MG285 FPGA. Lattice ECP5 LFE5U-45F features:
 
   * 285-pin csfBGA package (10 x 10 mm, 0.5 mm)
@@ -200,8 +202,10 @@ The interface and control signals are described below:
 
 * Digital Interface Signals: LENS7002 is using data bus LIMNS_DIQ1_D[11:0] and LMS_DIQ2_D[11:0], LMS_EN_IQSEL1 and LMS_EN_IQSEL2, LMS_FCLK1 and LMS_FCLK2, LMS_MCLK1 and LMS_MCLK2 signals to transfer data to/from FPGA. Indexes 1 and 2 indicate transceiver digital data PORT-1 or PORT-2. Any of these ports can be used to transmit or receive data. By default PORT-1 is selected as transmit port and PORT-2 is selected as receiver port. The FCLK# is input clock and MCLK# is output clock for LMS7002M transceiver. TXNRX signals sets ports directions. For LMS7002M interface timing details refer to `LMS7002M transceiver datasheet <https://limemicro.com/silicon/lms7002m/>`_ page 12-13.
 * LMS Control Signals: these signals are used for optional functionality:
+  
   * LMS_RXEN, LMS_TXEN – receiver and transmitter enable/disable signals connected to FPGA Bank 8 (VDIO_LMS_FPGA; 2.5V).
   * LMS_RESET – LMS7002M reset connected to FPGA Bank 3 (VDIO_LMS_FPGA; 2.5V).
+
 * SPI Interface: LMS7002M transceiver is configured via 4-wire SPI interface; FPGA_SPI_SCLK, FPGA_SPI_MOSI, FPGA_SPI_MISO, FPGA_SPI_LMS_SS. The SPI interface controlled from FPGA Bank 3 (VDIO_LMS_FPGA; 2.5V). 
 * LMS I2C Interface: can be used for LMS EEPROM content modifying or for debug purposes. The signals LMS_I2C_SCL, LMS_I2C_DATA connected to EEPROM.
 
@@ -328,7 +332,7 @@ RF transceiver TX and RX ports has its dedicated matching network which together
 RF path control signals are described in the Table 4.
 
 .. table:: Table 4. RF path control signals
-  
+
   +------------------------+---------------------------+------------------+--------------+-------------------------------------------------------------------------------------------------+
   | **Component**          | **Schematic signal name** | **I/O standard** | **FPGA pin** | **Description**                                                                                 |
   +========================+===========================+==================+==============+=================================================================================================+
@@ -352,7 +356,7 @@ RF path control signals are described in the Table 4.
 USB 3.0 controller
 ------------------
 
-Software controls LimeSDR Mini board via the USB 3.0 controller (FTDI USB 3.0 to FIFO interface bridge chip FT601 [link]). The controller signals description showed below:
+Software controls LimeSDR Mini board via the USB 3.0 controller (`FTDI USB 3.0 to FIFO interface bridge chip FT601 <https://ftdichip.com/products/ft600q-b/>`_). The controller signals description showed below:
 
 * FT_D[31:0] – FTDI 32-bit data interface is connected to FPGA.
 * FT_TXEn, FT_RXFn, FT_SIWUn, FT_WRn, FT_RDn, FT_OEn, FT_BE[3:0] – FTDI interface control signals.
@@ -607,7 +611,7 @@ Another 2 GPIOs are connected to 5 header on the board edge. In Table 11 is list
 JTAG interface
 --------------
 
-To debug FPGA design, flash bitstream to FPGA and/or Flash memory JTAG is used. It is located on the PCB top side (see Figure 4) and attaches to the programmer using 7-pin, 0.1” spaced JTAG connector J5. JTAG connector pins, schematic signal names, FPGA interconnections and I/O standards are listed in Table 12.
+To debug FPGA design, flash bitstream to FPGA and/or Flash memory JTAG is used. It is located on the PCB top side (see :ref:`target2`) and attaches to the programmer using 7-pin, 0.1” spaced JTAG connector J5. JTAG connector pins, schematic signal names, FPGA interconnections and I/O standards are listed in Table 12.
 
 .. table:: Table 12. JTAG connector J5 pins
 
