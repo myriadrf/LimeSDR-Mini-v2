@@ -21,7 +21,7 @@ LimeSDR Mini is low-cost software defined radio board. LimeSDR Mini development 
       .. figure:: v2.2/images/LimeSDR-Mini_v2.2_3D.png
          :width: 600
 
-         Figure 2: LimeSDR Mini v2.2 board
+         Figure 1: LimeSDR Mini v2.2 board
 
    .. tab:: LimeSDR Mini v2.3
 
