@@ -1,0 +1,64 @@
+Changes:
+
+LimeSDR-Mini_2v4_DB_DFMr0:
+ - HW_VER changed to 7;
+ - Changed VREF source to shunt type
+ - LMZ10501 and passive components changed to LMZ20501SILR (same as LimeSDR-Mini_2v2)
+ - Fresh DFM files generated
+
+LimeSDR-Mini_2v3_DB_DFMr0:
+ - HW_VER changed to 6;
+ - Added analog MUX 74LVC1G3157FZ4 for clock source selection
+ - LMS_TXNRX2 disconnected from FPGA B6 pin
+ - FPGA B6 pin connected to analog mux control CLK_SEL line
+ - Switching regulators reverted to LMZ10501 (as in 2v1) due to customer stock
+ - Fresh DFM files generated
+
+LimeSDR-Mini_2v2_DB_DFMr1:
+ - R71 and R72 moved from mounting hole. 4mm radius of free area is now available from the center of the mounting hole. Only bottom layer contains electrical changes.
+ - Assembly top and bottom mechanical layers updated, as well as Mechanical 1 layer.
+ - All DFM files generated except BOM, which only changed name from r0 to r1 to correspond the revision.
+
+LimeSDR-Mini_2v2_DB_DFMr0:
+ - Older version used as initial version for this revision: LimeSDR-Mini_2v1_DB_DFMr1
+ - LMZ10501 and passive components changed to LMZ20501SILR
+ - HW version changed to v5
+ - PCB changed only in the latter DC-DC converter region only on top layer. Holes are left in the same places
+ 
+ LimeSDR_Mini_2v0:
+ - New sheet with RF diagram.
+ - Updated diagrams.
+ - LMS EEPROM made NF.
+ - Changed RF MOSFETs (RF shunt and attenuator).
+ - Connected LMS Channel 2 RXes to GND.
+ - Connected Edge GPIO pin 5 to VCC5P0 instead of VCC1P8.
+ - Changed FPGA from Intel 10M16SAU169C8G to Lattice LFE5U-45F-MG285.
+ - Removed 10 pin 0.05" JTAG (Only Edge JTAG left).
+ - HW_VER changed to 3.
+ - Removed parallel termination resistors (NF) for FT_CLK line.
+ - LM75 temperature sensor fit.
+ - FPGA I2C EEPROM NF.
+ - Added Multi-footprint (SO08N/SO08W/DFN8) FPGA configuration FLASH.
+ - Removed angle LED and added TX and RX LEDs. FPGA_GPIO[7:4] are shared with TX and RX LEDs, ca be disconnected by clearing solder bridges JMP1-4.
+ - Changed XO from RTX5032A to E7355LF.
+ - XO DAC changed from 8 to 10 bit (from DAC5311IDCKR to DAC6311IDCK.
+ - Added 16 bit XO VC DAC (NF) and 2,5V reference for XO DAC (NF).
+ - Changed clock buffer CLKout2-4 Vddo to 3.3V and optimized power decoupling capacitors.
+ - Added new regulator for FPGA core (1.1V).
+ - VCC3P3 regulator's EN connected to VCC1P1 PG pin (power sequence).
+ - Other cosmetic  changes (sheet orientation, revision, etc).
+ - PCB fabrication requirements under FPGA increased: minimal copper width/spacing 3 mil (0.0762 mm), vias under FPGA reduced to 0.3mm ring/0.15mm via. Fabrication requirements for the rest of the PCB left unchanged (copper width/spacing 4mil or 0.1mm; vias 0.4mm ring and 0.2mm hole)
+ - Mounting hole added on the SMA connector side
+ 
+LimeSDR_Mini_1v3:
+ - Initial version from LimeSDR_Mini_1v2_DB_DFMr2
+ - 1.8V and 3.3V rail LDOs changed
+ - Capacitors C194 and C195 added for LMS power
+ - HW version changed (affects only PCB physical pin connection)
+ - BOM version changed (R44 is now fit)
+ - Layout improvements (FT connection)
+
+LimeSDR_Mini_1v2_DB_DFMr2:
+ - R44 made NF (BOM version)
+ - LimeSDR_Mini_1v2_schematic_r2.PDF generated
+ - LimeSDR_Mini_1v2_BOMr2.xls updated
