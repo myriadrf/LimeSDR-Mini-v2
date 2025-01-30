@@ -1,0 +1,17 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 11:49:29 On 2023-01-18
+
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [LimeSDR-Mini_2v3_Rounded_panel.PcbDoc]
+   Generated File[LimeSDR-Mini_2v3_Rounded_panel-RoundHoles.TXT]
+   Generated File[LimeSDR-Mini_2v3_Rounded_panel-SlotHoles.TXT]
+   Generated File[LimeSDR-Mini_2v3_Rounded_panel.LDP]
+   Generated File[LimeSDR-Mini_2v3_Rounded_panel.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 11:49:38 On 2023-01-18
