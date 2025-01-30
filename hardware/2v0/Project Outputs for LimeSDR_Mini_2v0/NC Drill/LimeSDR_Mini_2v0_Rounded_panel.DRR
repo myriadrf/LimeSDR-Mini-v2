@@ -1,0 +1,22 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: LimeSDR_Mini_2v0_Rounded_panel.PcbDoc   2021-12-01  10:51:54
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top to Bottom
+ASCII RoundHoles File : LimeSDR_Mini_2v0_Rounded_panel-RoundHoles.TXT
+ASCII SlotHoles File : LimeSDR_Mini_2v0_Rounded_panel-SlotHoles.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.15mm (6mil)                                             Round             636       PTH        0.00mm (0.00inch)
+T2      0.2mm (8mil)                                              Round             2644      PTH        0.00mm (0.00inch)
+T3      1mm (39mil)                                               Round             56        PTH        0.00mm (0.00inch)
+T4      1mm (39mil)                                               Slot              8         PTH        0.00mm (0.00inch)
+T5      3.2mm (126mil)                                            Slot              8         PTH        0.00mm (0.00inch)
+T6      0.8mm (31mil)                                             Round             48        NPTH       0.00mm (0.00inch)
+T7      1.1mm (43mil)                                             Round             8         NPTH       0.00mm (0.00inch)
+T8      3mm (118mil)                                              Round             16        NPTH       0.00mm (0.00inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              3424
+
+Total Processing Time (hh:mm:ss) : 00:00:05
