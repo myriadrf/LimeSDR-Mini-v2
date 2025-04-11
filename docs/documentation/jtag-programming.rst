@@ -33,7 +33,6 @@ FTDI FT2232H Mini Module is available for approximately $20 from distributors li
 FT2232H Mini Module preparation:
 
 * Connect CN3-1 to CN3-3, which connects USB VBUS to VCC (voltage regulator input). This can be done using jumper.
-* Connect CN2-5 (or CN2-1/CN2-3)) to CN2-11, which ties V3V3 to VIO on FTDI device.
 * Connect LimeSDR Mini v2 to FT2232H Mini module as specified in Table 2 (see Figure 1 for graphical representation).
 
 .. table:: Table 2. LimeSDR Mini board and FT2232H Mini module connections
@@ -50,6 +49,8 @@ FT2232H Mini Module preparation:
   | J5-4 (FPGA_JTAG_TMS)               | CN2-12 (AD3)                    |
   +------------------------------------+---------------------------------+
   | J5-5 (FPGA_JTAG_TDI)               | CN2-10 (AD1)                    |
+  +------------------------------------+---------------------------------+
+  | J5-6 (VCC3P3)                      | CN2-11 (VIO)                    |
   +------------------------------------+---------------------------------+
 
 .. figure:: images/LimeSDR-Mini_v2.0_and_FT2232H_Mini_module_connections.jpg
