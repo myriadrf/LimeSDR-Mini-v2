@@ -27,7 +27,7 @@ Where can I ask for help or report issues?
 
 How to configure FT601 USB3.0 chip?
 -----------------------------------
-* Download `FT600ChipConfigurationProgUtility_v1.3.0.2.zip <https://www.ftdichip.com/old2020/Support/Utilities/FT600ChipConfigurationProgUtility_v1.3.0.2.zip>`__ , connect board and hit "Read Configuration" (make sure that any other software is closed and is not using the board). You should see following settings:
+* Download `FT600ChipConfigurationProgUtility_v1.3.0.10.zip <https://ftdichip.com/wp-content/uploads/2025/02/FT600ChipConfigurationProgUtility_v1.3.0.10.zip>`__ , connect board and hit "Read Configuration" (make sure that any other software is closed and is not using the board). You should see following settings:
 
     .. figure:: images/LimeSDR-Mini_v2.2_FAQ_FTDI_Config.png
         :width: 600
