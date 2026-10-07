@@ -1,10 +1,10 @@
 _build
 venv/
 
-# Altium Designer 
+# Altium Designer files in /hardware folder
 /hardware/**/History/
-Schematics/__Previews
-__Previews
-*.$$$
-*.PrjPcb.Zip
+/hardware/**/__Previews/
+/hardware/**/*.$$$
+/hardware/**/*.PrjPcb.Zip
 /hardware/**/*.log
+
