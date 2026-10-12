@@ -479,6 +479,14 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
+[Parameter1]
+Name=SHEET_TOTAL
+Value=10
+
+[Parameter2]
+Name=PROJECT_VERSION
+Value=2.5
+
 [Configuration1]
 Name=Default Configuration
 ParameterCount=0
