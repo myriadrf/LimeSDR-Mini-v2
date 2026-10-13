@@ -477,15 +477,23 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=XNCKCINT
+
+[ProjectVariant1]
+UniqueID=DCD0D916-CF8B-40E3-B5C2-C593B14939B8
+Description=Default
+AllowFabrication=0
+ParameterCount=0
+VariationCount=0
+ParamVariationCount=0
 
 [Parameter1]
-Name=SHEET_TOTAL
-Value=10
-
-[Parameter2]
 Name=PROJECT_VERSION
 Value=2.5
+
+[Parameter2]
+Name=SHEET_TOTAL
+Value=10
 
 [Configuration1]
 Name=Default Configuration
