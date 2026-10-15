@@ -513,7 +513,7 @@ Variation25=Designator=R15|UniqueId=\AOOBERKC|Kind=1|AlternatePart=
 Variation26=Designator=C6|UniqueId=\SMJZWKWS|Kind=1|AlternatePart= 
 Variation27=Designator=C7|UniqueId=\AKDZVRHX|Kind=1|AlternatePart= 
 Variation28=Designator=MN3|UniqueId=\ETISMDZX|Kind=1|AlternatePart= 
-Variation29=Designator=ESD1|UniqueId=\HLVHEYEG|Kind=1|AlternatePart= 
+Variation29=Designator=ESD1|UniqueId=\HLVHEYEG|Kind=0|AlternatePart= 
 Variation30=Designator=R17|UniqueId=\HFYUENVO|Kind=1|AlternatePart= 
 Variation31=Designator=C19|UniqueId=\UGOOMBZE|Kind=1|AlternatePart= 
 Variation32=Designator=R19|UniqueId=\BXKSPDDO|Kind=1|AlternatePart= 
@@ -527,7 +527,7 @@ Variation39=Designator=R21|UniqueId=\JHKKUOFB|Kind=1|AlternatePart=
 Variation40=Designator=C21|UniqueId=\JLRCSGFY|Kind=1|AlternatePart= 
 Variation41=Designator=C22|UniqueId=\PXMDHMRP|Kind=1|AlternatePart= 
 Variation42=Designator=MN17|UniqueId=\XSZAKGGG|Kind=1|AlternatePart= 
-Variation43=Designator=ESD2|UniqueId=\AVVDNLPQ|Kind=1|AlternatePart= 
+Variation43=Designator=ESD2|UniqueId=\AVVDNLPQ|Kind=0|AlternatePart= 
 Variation44=Designator=R26|UniqueId=\PWJRFUSH|Kind=1|AlternatePart= 
 Variation45=Designator=FR43|UniqueId=\ESDLSSVI|Kind=1|AlternatePart= 
 Variation46=Designator=C71|UniqueId=\LEVCDELD|Kind=1|AlternatePart= 
