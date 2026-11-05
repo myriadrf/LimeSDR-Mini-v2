@@ -5,7 +5,7 @@ The LimeSDR Mini clock system is based on a high stability 40 MHz VCTCXO (Voltag
 
 The board provides both reference clock input and output U.FL connectors.
 
-.. list-table:: Table 2. Clock Functions
+.. list-table:: Table 3. Clock Functions
    :header-rows: 1
 
    * - Function
@@ -20,6 +20,9 @@ The board provides both reference clock input and output U.FL connectors.
    * - Clock Output
      - U.FL (J7)
      - 3.3V CMOS
+
+.. note::
+   On v2.2 boards, the external clock input J8 is not connected by default. To use it, remove R63 and fit R66 (0 |Omega|). On v2.3 and v2.4 boards, the clock source is selected by the FPGA via analogue switch IC20, so no hardware changes are needed.
 
 .. warning::
    When using external clock references, ensure signal levels and frequencies match specifications. 

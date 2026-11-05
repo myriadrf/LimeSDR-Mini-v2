@@ -6,17 +6,12 @@ Host Interface
 
 LimeSDR Mini should be plugged into a USB type-A socket slot on the host device.
 
-The host must provide a USB 2.0 or higher interface, and supply power (5V, 900 mA) via the USB type-A connector.
-
-.. note:: 
- A USB 3.0 interface is required to achieve the maximum supported data transfer rate.
+The host must provide a USB 3.0 interface, which supplies up to 900 mA at 5 V. A USB 2.0 port can also be used, but it only guarantees 500 mA, which may not be enough in some configurations and limits the data transfer rate.
 
 Cooling
 *******
 
 Depending on the application, host system and ambient temperature, additional cooling may be required to ensure reliable operation of the LimeSDR Mini board. This may be in the form of airflow through the host system, or a dedicated heatsink fitted to the board.
-
-The LimeFEA mPCIe adapter boards provide an integrated heatsink in the form of a large copper ground plane plus thermal pad.
 
 .. note::
    In the event of errors, instability or reduced performance, check the board temperature to ensure that it is within the specified operating range.
@@ -53,6 +48,8 @@ Recommended fan mounting solution is shown in Figure 6.
 
 Use two FIX-TP2-5 stands with internal and external thread (4mm width, M2 thread) as a spacers to mount the fan on top of LimeSDR Mini v2.x. Put FIX-TP2-5 stands from the top through LimeSDR Mini v2.x slot mounting holes around USB connector as shown in Figure 6. Secure the stands to the fan using two M2 thread screws (ex. P/N 1219480, Phillips head screw, M2x10). Secure two FIX-TP2-5 stands using two FIX-HP2-5 spacers as nuts from the bottom of the PCB as shown in Figure 7. This is enough to hold the fan but one may use additional FIX-HP2-5 (4mm width, M2 thread) stand with internal thread as an additional fan rest point which rests on PCB over unmounted J3 connector as shown in Figures 6 and 7. Secure FIX-HP2-5 spacer to the fan using the same screw (P/N 1219480).
 
+The fan is powered from connector J9 (0.1” pitch), which is not fitted by default, so a header must be soldered to the board to connect the fan. J9 supplies 5 V by default, and 3.3 V can be selected by resistors (R94, R96). The fan is controlled by the FPGA according to the board temperature, see :doc:`/reference/v2.4/tempsensor`.
+
 Total required mechanical components per LimeSDR Mini v2.x:
 
 * 2x `FIX-TP2-5 <https://www.tme.eu/en/details/fix-tp2-5/plastic-standoffs/fix-fasten/>`_ stands with internal and external M2 thread;
@@ -70,7 +67,7 @@ RF Connections
   
   Figure 8: LimeSDR Mini v2.x board top with RF connector positions
 
-.. table:: Table 1. RF connectors
+.. table:: Table 2. RF connectors
 
   +---------------+----------+--------------+----------+-----------------------+
   | **Connector** | **Type** | **Function** | **Band** | **Recommended range** |
