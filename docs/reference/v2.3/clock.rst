@@ -10,9 +10,9 @@ LimeSDR Mini board clock distribution block diagram is as shown in Figure 7.
 
 LimeSDR XTRX board features an on board 40.00 MHz VCTCXO as the reference clock for LMS7002M RF transceiver and FPGA PLLs.
 
-Rakon E7355LF 40 MHz voltage controlled temperature compensated crystal oscillator (VCTCXO) is the clock source for the board. VCTCXO frequency can be tuned by using 10 bit (IC11) or 16 bit (IC16 unpopulated) DAC. Main VCTCXO parameters are listed in Table 5.
+Rakon E7355LF 40 MHz voltage controlled temperature compensated crystal oscillator (VCTCXO) is the clock source for the board. VCTCXO frequency can be tuned by using 10 bit (IC11) or 16 bit (IC16 unpopulated) DAC. Main VCTCXO parameters are listed in Table 7.
 
-.. list-table:: Table 5. Rakon E7355LF VCTCXO main parameters
+.. list-table:: Table 7. Rakon E7355LF VCTCXO main parameters
    :header-rows: 1
 
    * - Frequency parameter
@@ -32,9 +32,9 @@ Rakon E7355LF 40 MHz voltage controlled temperature compensated crystal oscillat
 
 Analogue switch gives option to select clock source for RF transceiver and FPGA from buffered onboard VCTCXO clock (XO1) and external U.FL (J8). Buffered clock output (REF_CLK_OUT) is also available using U.FL (J7) connector.
 
-The board clock lines and other related signals/information are listed in Table 6.
+The board clock lines and other related signals/information are listed in Table 8.
 
-.. table:: Table 6. LimeSDR XTRX main clock lines
+.. table:: Table 8. LimeSDR XTRX main clock lines
 
   +--------------------------+---------------------------+------------------+--------------+--------------------------------------------+
   | **Source**               | **Schematic signal name** | **I/O standard** | **FPGA pin** | **Description**                            |
