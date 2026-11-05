@@ -1,9 +1,9 @@
 JTAG
 ####
 
-To debug FPGA design, flash bitstream to FPGA and/or Flash memory JTAG J5 connector is used. It is located on the PCB top side and attaches to the programmer using 7-pin, 0.1” spaced JTAG connector. JTAG connector pins, schematic signal names, FPGA interconnections and I/O standards are listed in Table 14.
+To debug FPGA design, flash bitstream to FPGA and/or Flash memory JTAG J5 connector is used. It is located on the PCB top side and attaches to the programmer using 7-pin, 0.1” spaced JTAG connector. JTAG connector pins, schematic signal names, FPGA interconnections and I/O standards are listed in Table 12.
 
-.. list-table:: Table 14. JTAG connector X9 pins
+.. list-table:: Table 12. JTAG connector X9 pins
   :header-rows: 1
   :stub-columns: 1
 

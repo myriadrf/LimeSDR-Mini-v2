@@ -7,9 +7,9 @@ Software controls LimeSDR Mini board via the USB 3.0 controller (`FTDI USB 3.0 t
 * FT_TXEn, FT_RXFn, FT_SIWUn, FT_WRn, FT_RDn, FT_OEn, FT_BE[3:0] – FTDI interface control signals.
 * FT_CLK – FTDI interface clock. Clock from FTDI is fed to FPGA.
 
-More information about USB 3.0 controller (FTDI) pins, schematic signal names, FPGA interconnections and I/O standards is given in Table 9.
+More information about USB 3.0 controller (FTDI) pins, schematic signal names, FPGA interconnections and I/O standards is given in Table 7.
 
-.. list-table:: Table 9. USB 3.0 controller interface
+.. list-table:: Table 7. USB 3.0 controller interface
    :header-rows: 1
    :stub-columns: 1
 

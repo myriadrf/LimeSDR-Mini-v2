@@ -1,9 +1,9 @@
 Peripheral Interfaces
 #####################
 
-FPGA_SPI pins, schematic signal names, FPGA interconnections and I/O standards/levels are shown in Table 11.
+FPGA_SPI pins, schematic signal names, FPGA interconnections and I/O standards/levels are shown in Table 9.
 
-.. list-table:: Table 11. FPGA_SPI interface pins
+.. list-table:: Table 9. FPGA_SPI interface pins
   :header-rows: 1
 
   * - Schematic signal name
@@ -31,9 +31,9 @@ FPGA_SPI pins, schematic signal names, FPGA interconnections and I/O standards/l
     - 2.5V / 3.3V
     - IC11 SPI slave select (FPGA output)
 
-FPGA_CFG_SPI pins, schematic signal names, FPGA interconnections and I/O standards are shown in Table 12.
+FPGA_CFG_SPI pins, schematic signal names, FPGA interconnections and I/O standards are shown in Table 10.
 
-.. list-table:: Table 12. FPGA_CFG_SPI interface pins
+.. list-table:: Table 10. FPGA_CFG_SPI interface pins
   :header-rows: 1
 
   * - Schematic signal name
@@ -57,9 +57,9 @@ FPGA_CFG_SPI pins, schematic signal names, FPGA interconnections and I/O standar
     - 3.3V
     - IC15 SPI slave select (FPGA output)
 
-FPGA_I2C (temperature sensor and EEPROM) interface slave devices and related information are given in Table 13.
+FPGA_I2C (temperature sensor and EEPROM) interface slave devices and related information are given in Table 11.
 
-.. list-table:: Table 13. FPGA_I2C interface pins
+.. list-table:: Table 11. FPGA_I2C interface pins
   :header-rows: 1
   
   * - I2C slave device

@@ -11,12 +11,12 @@ The RF network contains matching networks, RF switches, a loopback variable atte
 Frequency Range
 ===============
 
-Each LMS7002M RF transceiver TX and RX port is connected to a dedicated RF path, and the appropriate path should be selected according to the operating frequency. On the receive side, the wideband path (RX1_W) is recommended for frequencies below 2 GHz and the high-band path (RX1_H) for frequencies of 2 GHz and above. On the transmit side, the TX1_2 path is recommended for frequencies below 2 GHz and the TX1_1 path for frequencies of 2 GHz and above. The recommended frequency ranges for all ports are summarised in Table 5.
+Each LMS7002M RF transceiver TX and RX port is connected to a dedicated RF path, and the appropriate path should be selected according to the operating frequency. On the receive side, the wideband path (RX1_W) is recommended for frequencies below 2 GHz and the high-band path (RX1_H) for frequencies of 2 GHz and above. On the transmit side, the TX1_2 path is recommended for frequencies below 2 GHz and the TX1_1 path for frequencies of 2 GHz and above. The recommended frequency ranges for all ports are summarised in Table 3.
 
 .. note::
    The recommended frequency ranges are approximate values that cover most use cases, not hard limits of the RF paths. The optimum path may vary depending on other factors, such as the antenna and RF front-end parameters.
 
-.. list-table:: Table 5. LMS7002M RF transceiver ports and recommended frequency ranges
+.. list-table:: Table 3. LMS7002M RF transceiver ports and recommended frequency ranges
    :header-rows: 1
 
    * - RF transceiver port
@@ -33,9 +33,9 @@ Each LMS7002M RF transceiver TX and RX port is connected to a dedicated RF path,
 Control
 =======
 
-The onboard RF switches and the loopback attenuator are controlled by FPGA 3.3 V outputs. RF network control signals are described in Table 6.
+The onboard RF switches and the loopback attenuator are controlled by FPGA 3.3 V outputs. RF network control signals are described in Table 4.
 
-.. table:: Table 6. RF network control signals
+.. table:: Table 4. RF network control signals
 
   +------------------------+---------------------------+------------------+--------------+----------------------------------------------------+
   | **Component**          | **Schematic signal name** | **I/O standard** | **FPGA pin** | **Description**                                    |
