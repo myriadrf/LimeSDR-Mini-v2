@@ -3,30 +3,22 @@ Board Versions
 
 There are currently three versions of the LimeSDR Mini v2 board: v2.2, v2.3 and v2.4. 
 
-v2.2, v2.3 and v2.4 boards should be treated the same in terms of hardware functionality and software support. The main changes in each new board version are listed in Table 1. For a full list of changes, see the :doc:`/reference/changelog`.
+v2.2, v2.3 and v2.4 boards are supported by the same software. New hardware features added in each board version are listed in Table 1. For a full list of changes, see the :doc:`/reference/changelog`.
 
-.. list-table:: Table 1. Changes in each board version
+.. list-table:: Table 1. New features in each board version
    :header-rows: 1
    :stub-columns: 1
 
    * - Version
-     - Changes
+     - New features
    * - v2.4
-     - Switching regulators (IC14, IC19) changed back to LMZ20501.
-
-       Optional voltage reference (IC17) for the 16-bit VCTCXO DAC changed from MCP1525T to AS431.
-
-       IC17 is not fitted by default.
+     - No new features. Component changes only.
    * - v2.3
-     - Analogue switch (IC20) added to select the reference clock source.
+     - Reference clock source selection by the FPGA.
 
-       The FPGA selects the onboard VCTCXO or the external clock input (J8), so no hardware changes are needed.
-
-       Switching regulators (IC14, IC19) changed to LMZ10501.
+       The onboard VCTCXO or the external clock input (J8) can be selected without hardware changes.
    * - v2.2
      - Initial version.
-
-       The reference clock source is selected by resistors (R63, R66).
 
 .. figure:: /images/LimeSDR-Mini_v2.4_3D_top.png
   :width: 600
