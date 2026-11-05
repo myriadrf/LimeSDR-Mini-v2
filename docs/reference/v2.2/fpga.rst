@@ -15,7 +15,7 @@ LimeSDR Mini board features a Lattice ECP5 FPGA LFE5U-45F-xxMG285 (IC7). The boa
    * - LimeLight, SPI
      - LMS7002M RF transceiver (IC1)
      - :doc:`digital`
-   * - Quad SPI
+   * - Configuration SPI
      - Configuration flash (IC15)
      - `Configuration`_
    * - SPI
@@ -45,7 +45,7 @@ FPGA I/O banks 0, 1, 6, 7 and 8 are powered from VCC3P3 (3.3 V). Banks 2 and 3, 
 Configuration
 =============
 
-The FPGA is configured in SPI master mode (CFG[2:0] = 010) from the 128 Mb quad SPI configuration flash IC15 (W25Q128JVSIQ). Its interface pins are listed in :doc:`peripheralinterfaces`. For flash programming, see :doc:`/user/flashing`.
+The FPGA is configured in SPI master mode (CFG[2:0] = 010) from the 128 Mb SPI configuration flash IC15 (W25Q128JVSIQ). Its interface pins are listed in :doc:`peripheralinterfaces`. For flash programming, see :doc:`/user/flashing`.
 
 Configuration control signals:
 

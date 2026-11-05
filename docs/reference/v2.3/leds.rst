@@ -1,16 +1,16 @@
 LEDs
 ####
 
-LimeSDR Mini board comes with three dual colour (red and green (RG)) indication LEDs. These LEDs are soldered on the top of the board near RF connectors.
+The LimeSDR Mini board comes with three dual colour (red and green) indication LEDs. These LEDs are soldered on the top of the board near the RF connectors.
 
 .. figure:: /images/LimeSDR-Mini_v2.3_components_LEDs.png
   :width: 600
 
   Figure 8. LimeSDR Mini v2.3 indication LEDs (top)
 
-LEDs are connected to FPGA, hence their function may be programmed according to the user requirements. Default LED configuration and description are shown in Table 10.
+The LEDs are connected to the FPGA, hence their function may be programmed according to the user requirements. Default LED configuration and description are shown in Table 10.
 
-.. table:: Table 10. Default LEDs configuration
+.. table:: Table 10. Default LED configuration
 
   +---------------------+--------------------+--------------+--------------------------------------------+
   | **Board reference** | **Schematic name** | **FPGA pin** | **Comment**                                |

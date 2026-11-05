@@ -1,9 +1,9 @@
 Power Distribution
 ##################
 
-LimeSDR Mini board is powered from USB port (5V). Power delivery network consists of different power rails with different voltages, filters, power sequences. 
+The LimeSDR Mini board is powered from the USB port (5 V). The power delivery network consists of several power rails with different voltages, filters and power sequencing. 
 
-LimeSDR Mini board power distribution block diagram is presented in Figure 10.
+The LimeSDR Mini board power distribution block diagram is presented in Figure 10.
 
 .. figure:: /images/LimeSDR-Mini_v2.2_diagrams_power.png
   :width: 600

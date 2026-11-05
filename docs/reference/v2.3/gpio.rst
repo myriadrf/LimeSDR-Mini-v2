@@ -1,9 +1,9 @@
 GPIO Connector
 ##############
 
-Eight GPIOs from FPGA are connected to 10 pin 0.05” header. Additional 2 pins are dedicated for power.
+Eight GPIOs from the FPGA are connected to a 10-pin 0.05” header. Two additional pins are dedicated to ground (pin 9) and power (pin 10). Pin 10 is connected to 3.3 V via R42 by default, or to 5 V by fitting R43 instead.
 
-FPGA_GPIO[7:4] are shared with TX and RX LEDs. Remove solder from solder bridges to disconnect LEDs from GPIOs lines.
+FPGA_GPIO[7:4] are shared with TX and RX LEDs. Remove solder from solder bridges to disconnect the LEDs from the GPIO lines.
 
 FPGA GPIO header (J3) information is listed in Table 15.
 
@@ -19,42 +19,42 @@ FPGA GPIO header (J3) information is listed in Table 15.
    * - 1
      - FPGA_GPIO0
      - N15
-     - 3.3V
+     - 3.3 V
      -
    * - 2
      - FPGA_GPIO1
      - N18
-     - 3.3V
+     - 3.3 V
      -
    * - 3
      - FPGA_GPIO2
      - N16
-     - 3.3V
+     - 3.3 V
      -
    * - 4
      - FPGA_GPIO3
      - N17
-     - 3.3V
+     - 3.3 V
      -
    * - 5
      - FPGA_GPIO4
      - M18
-     - 3.3V
+     - 3.3 V
      - Shared with FPGA_LED2_G
    * - 6
      - FPGA_GPIO5
      - R18
-     - 3.3V
+     - 3.3 V
      - Shared with FPGA_LED2_R
    * - 7
      - FPGA_GPIO6
      - T17
-     - 3.3V
+     - 3.3 V
      - Shared with FPGA_LED3_G
    * - 8
      - FPGA_GPIO7
      - R17
-     - 3.3V
+     - 3.3 V
      - Shared with FPGA_LED3_R
    * - 9
      - GND
@@ -65,9 +65,9 @@ FPGA GPIO header (J3) information is listed in Table 15.
      -
      -
      -
-     - Selectable power net (3.3V or 5V). Default 3.3V
+     - Selectable power net (3.3 V or 5 V). Default 3.3 V.
 
-Additional 2 GPIOs are connected to 5-pin header on the board edge.
+Two additional GPIOs are connected to a 5-pin header on the board edge.
 
 FPGA GPIO edge header (J4) information is listed in Table 16. 
 
@@ -88,20 +88,20 @@ FPGA GPIO edge header (J4) information is listed in Table 16.
    * - 2
      - FPGA_EGPIO0
      - A10
-     - 3.3V
+     - 3.3 V
      -
    * - 3
      - FPGA_EGPIO1
      - A8
-     - 3.3V
+     - 3.3 V
      -
    * - 4
      - VCC3P3
      -
-     - 3.3V
-     - Power net (3.3V)
+     - 3.3 V
+     - Power net (3.3 V)
    * - 5
      - VCC5P0
      -
-     - 5.0V
-     - Power net (5.0V)
+     - 5.0 V
+     - Power net (5.0 V)

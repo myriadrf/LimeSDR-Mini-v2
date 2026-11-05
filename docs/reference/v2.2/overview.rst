@@ -1,26 +1,26 @@
 Overview
 ########
 
-The heart of the LimeSDR-Mini board is Lattice ECP5 (`LFE5U-45F`_) FPGA. It’s main function is to transfer digital data between the LMS7002M RF transceiver and a PC through a USB 3.0 connector. The block diagram for LimeSDR-Mini board is presented in the Figure 3.
+The heart of the LimeSDR Mini board is the Lattice ECP5 (`LFE5U-45F`_) FPGA. Its main function is to transfer digital data between the LMS7002M RF transceiver and a PC through a USB 3.0 connector. The block diagram of the LimeSDR Mini board is presented in Figure 3.
 
 .. figure:: /images/LimeSDR-Mini_v2.2_diagrams_BD.png
   :width: 600
 
-  Figure 3: LimeSDR Mini v2.2 board block diagram
+  Figure 3. LimeSDR Mini v2.2 board block diagram
 
-This section contains component location description on the board. LimeSDR Mini v2.2 board picture with highlighted connectors and main components are presented in Figure 4 and Figure 5, respectively.
+This section describes the locations of components on the board. LimeSDR Mini v2.2 board top and bottom views with highlighted connectors and main components are presented in Figure 4 and Figure 5, respectively.
 
 .. figure:: /images/LimeSDR-Mini_v2.2_components_top.png
   :width: 600
 
-  Figure 4: LimeSDR Mini v2.2 board top connectors and main components
+  Figure 4. LimeSDR Mini v2.2 board top connectors and main components
 
 .. figure:: /images/LimeSDR-Mini_v2.2_components_bot.png
   :width: 600
 
-  Figure 5: LimeSDR Mini v2.2 board bottom connectors and main components
+  Figure 5. LimeSDR Mini v2.2 board bottom connectors and main components
 
-Description of board components is given in the Table 1.
+A description of board components is given in Table 1.
 
 .. table:: Table 1. Board components
 
@@ -41,25 +41,25 @@ Description of board components is given in the Table 1.
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
    | **Configuration,   Status and Setup Elements**                                                                                         |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
-   | J5                   | JTAG chain connector    | FPGA programming pin header on the board edge   for JTAG cable, 0.1” pitch            |
+   | J5                   | JTAG chain connector    | FPGA programming pin header on the board edge for JTAG cable, 0.1” pitch (not fitted) |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
-   | LED1, LED2, LED3     | Red-green status LEDs   | User defined FPGA indication LED.                                                     |
+   | LED1, LED2, LED3     | Red-green status LEDs   | User defined FPGA indication LEDs.                                                    |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
    | **General   User Input/Output**                                                                                                        |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
-   | J3                   | Pin header              | 8x FPGA GPIOs, 3.3V, 0.05” pitch                                                      |
+   | J3                   | Pin header              | 8x FPGA GPIOs, 3.3 V, 0.05” pitch (not fitted)                                        |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
-   | J4                   | Pin header              | 2x FPGA GPIOs on the board edge, 3.3V, 0.1”   pitch                                   |
+   | J4                   | Pin header              | 2x FPGA GPIOs on the board edge, 3.3 V, 0.1” pitch (not fitted)                       |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
-   | J9                   | Pin header              | 5V (3.3V voltage can be chosen by resistors)   fan connection pin headers, 0.1” pitch |
+   | J9                   | Pin header              | 5 V (3.3 V by resistors) fan connection pin header, 0.1” pitch (not fitted)           |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
    | **Memory   Devices**                                                                                                                   |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
-   | IC2                  | IC                      | I²C EEPROM Memory 128Kb (16 x 8), connected   to RF transceiver I2C bus               |
+   | IC2                  | IC                      | I²C EEPROM Memory 128Kb (16K x 8), connected to RF transceiver I²C bus (not fitted)   |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
-   | IC12                 | IC                      | I²C EEPROM Memory 128Kb (16K x 8), connected   to FPGA I2C bus                        |
+   | IC12                 | IC                      | I²C EEPROM Memory 128Kb (16K x 8), connected to FPGA I²C bus (not fitted)             |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
-   | IC15                 | IC                      | Quad SPI Flash Memory 128 Mb (16M x 8)   connected to FPGA SPI                        |
+   | IC15                 | IC                      | SPI Flash Memory W25Q128JVSIQ, 128 Mb (16M x 8), connected to FPGA configuration SPI  |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
    | **Communication   Ports**                                                                                                              |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
@@ -69,15 +69,13 @@ Description of board components is given in the Table 1.
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
    | XO1                  | VCTCXO                  | 40.00 MHz Voltage Controlled Temperature   Compensated Crystal Oscillator             |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
-   | IC11                 | IC                      | 10 bit DAC for TCXO (XT4) frequency tuning   (default)                                |
+   | IC11                 | IC                      | 10-bit DAC (DAC6311) for VCTCXO (XO1) frequency tuning (default)                      |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
-   | IC16                 | IC                      | 16 bit DAC for TCXO (XT4) frequency tuning   (unpopulated)                            |
+   | IC16                 | IC                      | 16-bit DAC (AD5662) for VCTCXO (XO1) frequency tuning (unpopulated)                   |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
    | IC17                 | IC                      | Voltage reference (unpopulated)                                                       |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
-   | IC9                  | IC                      | Clock buffer                                                                          |
-   +----------------------+-------------------------+---------------------------------------------------------------------------------------+
-   | IC20                 | IC                      | Analog switch                                                                         |
+   | IC9                  | IC                      | Clock buffer LMK00105                                                                 |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
    | J8                   | U.FL connector          | Reference clock input                                                                 |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
@@ -85,17 +83,17 @@ Description of board components is given in the Table 1.
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
    | **Power   Supply**                                                                                                                     |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
-   | IC14                 | IC                      | Switching regulator LMZ10501 (1.8V rail)                                              |
+   | IC14                 | IC                      | Switching regulator LMZ20501 (1.8 V rail)                                             |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
-   | IC19                 | IC                      | Switching regulator LMZ10501 (3.3V rail)                                              |
+   | IC19                 | IC                      | Switching regulator LMZ20501 (3.3 V rail)                                             |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
-   | IC13                 | IC                      | Linear regulator LD39100PUR (1.1V rail)                                               |
+   | IC13                 | IC                      | Linear regulator LD39100PUR (1.1 V rail)                                              |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
-   | IC5                  | IC                      | Linear regulator LD39100PUR (1.25V rail)                                              |
+   | IC5                  | IC                      | Linear regulator LD39100PUR (1.25 V rail)                                             |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
-   | IC6                  | IC                      | Linear regulator LD39100PUR (1.4V rail)                                               |
+   | IC6                  | IC                      | Linear regulator LD39100PUR (1.4 V rail)                                              |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
-   | IC18                 | IC                      | Linear regulator LD39100PUR (2.5V rail)                                               |
+   | IC18                 | IC                      | Linear regulator LD39100PUR (2.5 V rail)                                              |
    +----------------------+-------------------------+---------------------------------------------------------------------------------------+
 
 A more detailed description is provided in the following sections.

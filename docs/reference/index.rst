@@ -3,10 +3,10 @@ Hardware Reference
 
 The LimeSDR Mini v2 Hardware Reference manual is organised into separate sections for each board revision. 
 
-Important changes are documented in Changelog.
+Important changes are documented in the :doc:`changelog`.
 
 .. note::
-  Version identifying text is printed on top side next to the USB plug.
+  Version identifying text is printed on the top side, next to the USB plug.
 
 .. toctree::
    :maxdepth: 1
