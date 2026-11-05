@@ -15,7 +15,7 @@ Introduction
    :align: center
    :width: 600
 
-The LimeSDR Mini v2 is a compact and cost-effective software-defined radio (SDR) platform engineered for advanced wireless communication research, prototyping, and development. The device is based on the Lime Microsystems LMS7002M RF transceiver, supporting a frequency range of 10 MHz to 3.5 GHz, full-duplex operation, and instantaneous bandwidths of up to 30.72 MHz.
+The LimeSDR Mini v2 is a compact and cost-effective software-defined radio (SDR) platform engineered for advanced wireless communication research, prototyping, and development. The device is based on the Lime Microsystems LMS7002M RF transceiver, supporting a frequency range of 10 MHz to 2.6 GHz, full-duplex operation, and instantaneous bandwidths of up to 30.72 MHz.
 
 The digital processing architecture incorporates a Lattice ECP5 FPGA, which performs high-speed data handling, digital signal processing, and interface management between the RF front end and the host system. The FPGA enables flexible hardware-level customization, allowing implementation of user-defined processing pipelines and acceleration of computationally intensive tasks.
 
@@ -38,8 +38,8 @@ RF
      - SISO (1T1R)
      - Full duplex
    * - Frequency Range
-     - 10 MHz – 3.5 GHz
-     - Continuous coverage
+     - 10 MHz – 2.6 GHz
+     - Non-continuous coverage
    * - Bandwidth
      - up to 30.72 MHz
      - Software configurable
